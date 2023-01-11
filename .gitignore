@@ -32,6 +32,7 @@ wp-content/upgrade
 wp-content/uploads
 wp-content/advanced-cache.php
 wp-content/debug.log
+wp-content/debug.log*
 wp-content/themes/genesis-block-theme
 wp-content/themes/twentynineteen
 wp-content/themes/twentytwenty
