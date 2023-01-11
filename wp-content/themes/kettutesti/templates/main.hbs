@@ -3,8 +3,6 @@
 
 <head>
     <meta charset="{{wp.charset}}">
-    <link href="//www.google-analytics.com" rel="dns-prefetch">
-
 
     <!-- FAVICONS -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{wp.theme_url}}/img/favicon/apple-touch-icon.png?1">
@@ -34,38 +32,8 @@
     <meta property="og:image" content="{{this.kettu-image}}">
     {{/if}}
 
-    <!-- link rel="stylesheet" type="text/css"
-          href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"/ -->
-  
-
-    <!-- script src="https://cmp.osano.com/169laxSJKM9wtUHj/d5e550e3-005d-4c08-9941-2c0fc33bb9f1/osano.js"></script -->
     {{do_action 'wp_head'}}
     <script src="{{wp.js_url}}" type="text/javascript"></script>
-
-   <script type="text/plain" data-consent="analytics">
-      var _paq = window._paq = window._paq || [];
-      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="//webanalytics.digiaiiris.com/js/";
-        _paq.push(['setTrackerUrl', u+'tracker.php']);
-        _paq.push(['setSiteId', '909']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.src=u+'piwik.min.js'; s.parentNode.insertBefore(g,s);
-      })();
-  </script>
-    
-  <script type="text/plain" data-consent="analytics">
-    (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:xxxxxx,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
 
 </head>
 
@@ -90,29 +58,6 @@
     {{do_action 'wp_footer'}}
 {{/if}}
 
-<!-- script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script -->
-
-<script>
-
-    /*window.cookieconsent.initialise( {
-        'palette': {
-            'popup': {
-                'background': '#ebfaf4'
-            },
-            'button': {
-                'background': '#2cb39a',
-                'text': '#ffffff'
-            }
-        },
-        'theme': 'classic',
-        'content': {
-            'message': 'Käytämme tällä sivustolla evästeitä parantaaksemme käyttökokemusta. Käyttämällä sivustoamme hyväksyt tämän.',
-            'dismiss': 'OK',
-            'link': 'Katso tietosuojaseloste.',
-            'href': '/tietosuojaseloste/'
-        }
-    } );*/
-</script>
 </body>
 
 </html>
