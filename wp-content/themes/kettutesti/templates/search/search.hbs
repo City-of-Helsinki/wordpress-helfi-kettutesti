@@ -1,0 +1,25 @@
+<div class="search">
+
+    {{!> search-form.hbs}}
+    <div class="search__list-wrapper">
+        <h1 class="search__title">{{search.title}}</h1>
+
+        {{#if posts}}
+            <ol class="search__list">
+                {{#each posts}}
+                    <li class="search__list-item">
+                        <a class="search__list-item-link" href="{{url}}">
+                            <h4 class="search__list-item-title">{{post_title}}</h4>
+                            <p class="search__list-item-excerpt">{{post_excerpt}}</p>
+
+                            {{>icon-link-arrow.hbs}}
+                        </a>
+                    </li>
+                {{/each}}
+            </ol>
+
+            {{> pagination.hbs}}
+
+        {{/if}}
+    </div>
+</div>

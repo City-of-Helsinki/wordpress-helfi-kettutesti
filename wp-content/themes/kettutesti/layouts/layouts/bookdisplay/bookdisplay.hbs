@@ -1,0 +1,61 @@
+{{call 'setupLayoutData'}}
+
+<section id="{{anchor_id}}" 
+class="
+bookdisplay 
+xm:mb-5 mb-15" 
+style="">
+
+<div 
+class="
+bookdisplay__wrapper 
+bg-yellow-200 
+xm:w-11/12 sm:w-11/12 w-8/12 
+mx-auto p-10 
+grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5">
+
+    <img src="{{this.bookimg.url}}" 
+    class="
+    col-span-2 
+    justify-self-center 
+    w-full lg:w-auto xl:w-auto" 
+    alt=""
+    aria-hidden="true" />
+
+    <div 
+    class="
+    bookdisplay__description 
+    xm:ml-0 sm:ml-0 ml-10 
+    col-span-1 sm:col-span-1 md:col-span-3 lg:col-span-3 xl:col-span-2 
+    self-center">
+
+        <h2 
+        class="
+        text-red-500 font-bold 
+        text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 
+        mb-5">
+        {{this.booktitle}}
+        </h2>
+        <p 
+        class="
+        text-base md:text-lg lg:text-xl xl:text-xl 
+        mb-10">
+        {{this.bookdescription}}
+        </p>
+        <a href="{{this.downloadlink.url}}" 
+        target="_blank"
+        title="Linkki aukeaa uuteen ikkunaan"
+        aria-label="kirija linkki aukeaa uuteen ikkunaan"
+        class="
+        bg-green-600 
+        text-white font-bold
+        py-2 px-4 
+        text-base md:text-xl lg:text-2xl xl:text-2xl 
+        rounded no-underline">
+        {{this.btnname}}
+        </a>
+    </div>
+
+    </div>
+
+</section>

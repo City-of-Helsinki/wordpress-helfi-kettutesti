@@ -1,0 +1,81 @@
+.single-lift {
+
+	display: block;
+
+	&-wrapper {
+		position: relative;
+		grid-column: span 3;
+		display: grid;
+		width: 100%;
+		max-width: 328px;
+		align-self: stretch;
+		margin-bottom: 32px;
+
+		@include focus-within();
+
+		&:hover {
+			text-decoration: none;
+			.single-lift__title {
+				text-decoration: underline;
+			}
+		}
+
+		a {
+
+			display: block;
+			transition: transform .15s ease, box-shadow .15s ease;
+
+			@include breakpoint($desktop) {
+
+			}
+
+			&:hover {
+
+			}
+
+			&:focus {
+				outline: 0 none;
+			}
+		}
+	}
+
+	&__image {
+		max-width: 100%;
+		margin-bottom: 32px;
+	}
+
+	&__pubdate {
+		color: $color-black;
+		font-size: 12px;
+		line-height: 16px;
+		margin-bottom: 8px;
+		display: block;
+		text-decoration: none !important;
+
+		@include breakpoint($desktop) {
+			font-size: 15px;
+			line-height: 20px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__title {
+		color: $color-black;
+		font-size: 16px;
+		line-height: 24px;
+		margin-top: 0;
+		margin-bottom: 24px;
+
+		@include breakpoint($desktop) {
+			font-size: 20px;
+			line-height: 28px;
+
+		}
+	}
+
+	.icon-link-arrow {
+		path {
+			fill: $color-shamrock;
+		}
+	}
+}

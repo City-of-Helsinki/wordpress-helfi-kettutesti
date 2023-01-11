@@ -1,0 +1,29 @@
+{{call 'setupLayoutData'}}
+
+<section {{#if anchor_id}}id="{{anchor_id}}"{{/if}} class="linklist{{#if
+        background_color}} {{background_color}}{{/if}}{{#if
+        extra_margin.top}} theme__extra-margin--top{{/if}}{{#if
+        extra_margin.bottom}} theme__extra-margin--bottom{{/if}}">
+
+    {{#if cut_top_corner}}<span class="corner-top"></span>{{/if}}
+    {{#if cut_bottom_corner}}<span class="corner-bottom"></span>{{/if}}
+
+    <div class="linklist__wrapper">
+
+        {{#if title}}
+            <h2 class="linklist__title">{{title}}</h2>
+        {{/if}}
+
+        {{#if listing}}
+            <ul class="linklist__listing">
+                {{#each listing}}
+                    {{> single-lift.hbs}}
+                {{/each}}
+            </ul>
+        {{/if}}
+
+    </div>
+
+
+</section>
+

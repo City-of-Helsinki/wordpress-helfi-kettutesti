@@ -1,0 +1,41 @@
+{{call 'setupLayoutData'}}
+
+<section {{#if anchor_id}}id="{{anchor_id}}"{{/if}} class="timeline-textual{{#if
+        background_color}} {{background_color}}{{/if}}" style="">
+
+    <div class="timeline-textual__wrapper swiper-container">
+
+        {{#if dates}}
+            <div class="swiper-wrapper">
+                <ul class="timeline-textual__dates swiper-slide">
+                    {{#each dates}}
+                        <li class="timeline-textual__date-item">
+
+
+                            {{#if title}}
+                                <h2 class="timeline-textual__date-title">{{title}}</h2>
+                            {{/if}}
+
+                            {{#if texts}}
+                                <ul class="timeline-textual__date-texts">
+                                    {{#each texts}}
+                                        <li class="timeline-textual__date-text">
+                                            <p class="timeline-textual__date-text-paragraph">{{{text}}}</p>
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            {{/if}}
+
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="swiper-scrollbar"></div>
+        {{/if}}
+
+
+
+    </div>
+
+
+</section>

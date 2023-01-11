@@ -1,0 +1,36 @@
+{{call 'setupLayoutData'}}
+
+<section {{#if anchor_id}}id="{{anchor_id}}"{{/if}}
+         class="article{{#if
+                 cut_top_corner}} theme__cut-top-corner{{/if}}{{#if
+                 cut_bottom_corner}} theme__cut-bottom-corner{{/if}}{{#if
+                 background_color}} {{background_color}}{{/if}}{{#if
+                 extra_margin.top}} theme__extra-margin--top{{/if}}{{#if
+                 extra_margin.bottom}} theme__extra-margin--bottom{{/if}}" style="">
+
+    {{#if cut_top_corner}}<span class="corner-top"></span>{{/if}}
+    {{#if cut_bottom_corner}}<span class="corner-bottom"></span>{{/if}}
+
+    <div class="article__wrapper">
+
+
+        {{! ************* Field: wysiwyg ************* }}
+
+        {{#if wysiwyg}}
+            <div class="article__wysiwyg">{{{wysiwyg}}}</div>
+        {{/if}}
+
+
+
+        {{! ************* Field: link ************* }}
+
+        {{#if link}}
+            <a href="{{link.url}}" class="article__link"
+               {{#if link.target}}target="{{link.target}}"{{/if}}>{{link.title}}</a>
+        {{/if}}
+
+
+    </div>
+
+
+</section>

@@ -1,0 +1,51 @@
+{{call 'setupLayoutData'}}
+
+<section {{#if anchor_id}}id="{{anchor_id}}"{{/if}}
+         class="icon-linklist{{#if
+                 background_color}} {{background_color}}{{/if}}{{#if
+                 extra_margin.top}} theme__extra-margin--top{{/if}}{{#if
+                 extra_margin.bottom}} theme__extra-margin--bottom{{/if}}" style="">
+
+    {{#if cut_top_corner}}<span class="corner-top"></span>{{/if}}
+    {{#if cut_bottom_corner}}<span class="corner-bottom"></span>{{/if}}
+
+    <div class="icon-linklist__wrapper">
+
+
+        {{! ************* Field: title ************* }}
+
+        {{#if title}}
+            <h2 class="icon-linklist__title">{{title}}</h2>
+        {{/if}}
+
+        {{! ************* Field: listing ************* }}
+
+        {{#if listing}}
+            <ul class="icon-linklist__listing">
+                {{#each listing}}
+                    {{#equals @index 2}}
+                        <span class="icon-linklist__listing-break"></span>
+                    {{/equals}}
+                    <li class="icon-linklist__listing-item">
+                        <a class="icon-linklist__listing-link" href="{{link.url}}" target="{{link.target}}">
+                            {{#if image}}
+                                <img class="icon-linklist__listing-image" src="{{image.url}}"
+                                     {{#if image.srcset}}srcset="{{image.srcset}}"{{/if}}
+                                    {{#if image.alt}}alt="{{image.alt}}"{{/if}}
+                                    {{#if image.title}}title="{{image.title}}"{{/if}}
+                                >
+                            {{/if}}
+                            {{#if title}}
+                                <p class="icon-linklist__listing-text">{{{title}}}</p>
+                            {{/if}}
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+
+
+    </div>
+
+
+</section>

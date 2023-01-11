@@ -1,0 +1,5 @@
+@mixin letter-spacing($spacing) {
+
+	letter-spacing: ($spacing / 1000) * 1em;
+
+}

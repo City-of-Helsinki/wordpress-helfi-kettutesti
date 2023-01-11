@@ -1,0 +1,184 @@
+{{!-- <div>{{dump this.facebookurl}}</div> --}}
+
+<section id="{{anchor_id}}" class="heroresultdisplay " style="">   
+
+<div class="heroresultdisplay__wrapper">
+
+<div 
+class="
+heroresultdisplay__wrapper-hero 
+grid 
+xm:grid-cols-1 grid-cols-4  
+mt-20"
+>
+    <img src="{{this.resultinformation.resultgallary.3.url}}" alt="" 
+    class="
+    xm:w-2/12 sm:w-8/12 md:w-8/12 lg:w-6/12 xl:w-auto
+    xm:mt-[-80px]"
+    aria-hidden="true" />
+    <div 
+    class="
+    col-span-2 
+    grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2
+    xm:mt-[-50px]
+    "
+    >
+        <div 
+        class=" 
+        xm:order-2 order-1
+        xm:w-11/12 w-full
+        xm:mx-auto 
+        "
+        >
+        <img src="{{this.resultinformation.resultgallary.1.url}}" alt="" 
+        class="
+        xm:hidden block
+        w-8/12 md:w-5/12 lg:w-5/12 xl:w-auto"
+        aria-hidden="true" />
+        <h1 
+        class="
+        text-red-500 font-bold 
+        text-3xl md:text-4xl lg:text-5xl xl:text-7xl 
+        mt-6 md:mt-8 lg:mt-10 xl:mt-10" 
+        id="resulttitle"
+        >
+        {{#if this.kettu.result.title}}
+        {{this.kettu.result.title}}
+        {{else}}
+         {{this.resultinformation.errorinfo.errortitle}}
+        {{/if}}
+        </h1>
+        <h2 
+        class=
+        "font-semibold 
+        mt-6 md:mt-8 lg:mt-10 xl:mt-10 
+        text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl" 
+        id="resultsubs"
+        >
+        {{#if this.kettu.result.subtitle}}
+        {{this.kettu.result.subtitle}}
+        {{else}}
+         {{this.resultinformation.errorinfo.errorsubtitle}}
+        {{/if}}
+        </h2>
+        <p 
+        class=
+        "text-lg lg:text-xl xl:text-2xl 
+        my-4 md:my-6 lg:my-7 xl:my-8" 
+        id="resultdes">
+        {{#if this.kettu.result.description}}
+        {{this.kettu.result.description}}
+        {{/if}}
+        </p>         
+         <div id="shareLink">
+             <h2 
+             class="
+             font-semibold 
+             mt-6 md:mt-8 lg:mt-10 xl:mt-10 
+             text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl" 
+             id="shareText"
+             >
+             {{this.resultinformation.sharebtn}}
+             </h2>
+         </div>
+
+        <div id="shareicons" class="mt-5 flex">
+                   <a 
+                   href="{{this.facebookurl}}" 
+                   target="_blank" 
+                   aria-label="Facebook aukeaa uuteen ikkunaan">
+                   <img 
+                   src="https://img.icons8.com/color/48/000000/facebook.png" 
+                   class="mr-3 no-underline"
+                   alt="facebook"
+                   aria-hidden="true"
+                   />
+                   </a>
+                <a 
+                href="{{this.twitterurl}}"
+                target="_blank"
+                aria-label="twitter aukeaa uuteen ikkunaan">
+                <img 
+                src="https://img.icons8.com/color/48/000000/twitter--v1.png"
+                alt="twitter"
+                aria-hidden="true"/>
+                </a>        
+        </div>
+
+        </div>
+        <div class="
+        xm:order-1 order-2 
+        image-cont 
+        justify-self-center self-center 
+        w-8/12 sm:w-6/12 md:8/12 lg:10/12 xl:w-10/12" 
+        id="imgdisplay"
+        >
+        {{#if this.kettu-image}}
+        <img src={{this.kettu-image}} alt={{this.kettu.result.title}} aria-hidden="true"></img>
+        {{else}}
+        <img src={{this.resultinformation.errorinfo.errorimage.url}} alt={{this.resultinformation.errorinfo.errortitle}} aria-hidden="true"></img>
+        {{/if}}            
+        </div>
+    </div>
+
+    <div class="grow-0 relative">
+        <img src="{{this.resultinformation.resultgallary.2.url}}" 
+             alt="" 
+             class="
+             absolute xm:hidden flex 
+             right-0 -top-10 
+             w-8/12 sm:w-10/12 md:w-auto lg:w-6/12 xl:w-auto"
+             aria-hidden="true" />
+        <img src="{{this.resultinformation.resultgallary.0.url}}" 
+             alt="" 
+             class="absolute xm:hidden flex 
+             right-0 bottom-0 
+             w-8/12 sm:w-10/12 md:w-auto lg:w-4/12 xl:w-auto"
+             aria-hidden="true" />
+    </div>
+</div>
+
+<div class="
+heroresultdisplay_wrapper-buttons 
+    xm:w-5/12 w-6/12 
+    xm:mx-0 mx-auto
+    xm:pl-4 pl-0
+    xm:my-8 sm:my-8 my-13">
+    {{#if this.resultinformation.buttonlinks.0.btnlink1.url}}
+    <a href="{{this.resultinformation.buttonlinks.0.btnlink1.url}}" 
+    class="
+    bg-green-600 text-white font-bold py-2 px-4 
+    text-base md:text-xl lg:text-2xl xl:text-3xl 
+    rounded 
+    xm:block sm:block inline no-underline
+    ">
+    {{this.resultinformation.buttonnames.0.btnname1}}
+    </a>
+    {{/if}}
+    {{#if this.resultinformation.buttonlinks.0.btnlink2.url}}
+     <a href="{{this.resultinformation.buttonlinks.0.btnlink2.url}}" 
+     class="
+     border-2 border-green-600 text-green-600 font-bold py-2 px-4 
+     text-base md:text-xl lg:text-2xl xl:text-3xl 
+     rounded 
+     xm:ml-0 sm:ml-0 ml-3
+     mt-5 
+     xm:block sm:block inline no-underline
+     ">
+    {{this.resultinformation.buttonnames.0.btnname2}}
+     </a>
+     {{/if}}
+     {{#if this.resultinformation.buttonlinks.0.btnlink3.url}}
+     <a href="{{this.resultinformation.buttonlinks.0.btnlink3.url}}" 
+     class="
+     bg-green-600 text-white font-bold py-2 px-4 
+     text-base md:text-xl lg:text-2xl xl:text-2xl 
+     rounded 
+     xm:block sm:block inline no-underline"
+     >
+     {{this.resultinformation.buttonnames.0.btnname3}}
+     </a>
+     {{/if}}
+</div>
+
+</div>

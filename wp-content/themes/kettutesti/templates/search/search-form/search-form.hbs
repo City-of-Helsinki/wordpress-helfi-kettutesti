@@ -1,0 +1,11 @@
+<form class="search-form" action="{{wp.home_url}}">
+
+    <label class="visually-hidden" for="search-form-input">{{search.search-placeholder}}</label>
+    {{!> icon-search.hbs}}
+    <input id="search-form-input" type="text" name="s" class="search-form__input"
+           placeholder="{{search.search-placeholder}}"
+           value="{{search.search_term}}"
+           aria-label="{{search.search-placeholder}}">
+    <input class="search-form__submit" type="submit" value="{{search.search-button-text}}">
+
+</form>

@@ -1,0 +1,123 @@
+.some-navigation {
+
+	//
+	// DEFAULT CONTNENT WRAPPER CLASS ------------------
+	//
+
+	width: 100%;
+
+	@include breakpoint($desktop) {
+
+		position: sticky;
+		right: 0;
+		top: 136px;
+		bottom: 60%;
+		z-index: 51;
+	}
+
+	&__wrapper {
+		position: relative;
+		height: 80px;
+
+		margin-top: -40px;
+		max-width: 360px;
+		z-index: 20;
+		overflow: hidden;
+
+		@include breakpoint($desktop) {
+			width: 158px;
+			height: 391px;
+			margin-top: 0;
+			position: absolute;
+			right: 0;
+			margin-top: 0;
+			top: 0;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			width: 160%;
+			height: 200%;
+			top: 0%;
+			left: 0;
+			background: #E15A69;
+			transform-origin: 50% 0%;
+			transform: rotate(15deg);
+			z-index: 0;
+
+			@include breakpoint($desktop) {
+				display: none;
+			}
+		}
+	}
+
+	&__list {
+		margin: 0;
+		z-index: 1;
+		position: relative;
+		list-style-type: none;
+		display: flex;
+		justify-content: space-around;
+		padding-top: 28px;
+		padding-left: 0;
+
+		@include breakpoint($desktop) {
+			flex-direction: column;
+			padding-left: 80px;
+			padding-top: 80px;
+		}
+	}
+
+	&__list-item {
+		@include breakpoint($desktop) {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__list-link {
+		display: flex;
+		height: 24px;
+		width: 24px;
+		justify-content: center;
+		align-items: center;
+		//border: 1px solid white;
+
+		@include focus();
+
+		@include breakpoint($desktop) {
+			height: 32px;
+			width: 32px;
+		}
+	}
+
+	&__list-link-icon {
+		max-height: 100%;
+		path {
+			fill: $color-white;
+		}
+	}
+
+	.some-rectangle {
+		display: none;
+
+		@include breakpoint($desktop) {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+
+		}
+	}
+
+	//
+	// DEFAULT LAYOUTS CLASSES -------------------------
+	//
+
+	//
+	// DEFAULT LAYOUT THEMING CLASSES ------------------
+	//
+
+}

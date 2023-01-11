@@ -1,0 +1,47 @@
+/* Color palette */
+
+/* Basic colors */
+
+$color-white: rgb(255, 255, 255);
+$color-black: rgb(33, 33, 33);
+
+/* Primary brand colors */
+
+$color-mandy: #E15A69;
+$color-sea-pink: #EE97A2;
+$color-anakiwa: #99DDFF;
+$color-barley-white: #FFF1CD;
+$color-tapestry: #A64895;
+$color-medium-purple: #C631DE;
+$color-shamrock: #46E1A0;
+$color-alabaster: #F7F7F7;
+
+/*$color-lavender-purple: #A78FC1;
+$color-off-green: #EBFAF4;
+$color-moss-green: #B4DCA0;
+$color-jungle-green: #2CB39A;
+$color-dark-jungle-green: #20816F;
+$color-chartreuse-yellow: #DCF000;
+
+$color-wild-sand: #F4F4F4;
+$color-alto: #DCDCDC;
+$color-corduroy: #686969;
+$color-cod-gray: #1D1D1D;
+
+$color-burnt-sienna: #E48D4D;*/
+
+/* Context colors */
+$color-body-text: $color-black;
+$color-body: $color-white;
+
+$color-link: $color-black;
+$color-link-hover: $color-black;
+
+$color-tap-highlight: $color-shamrock;
+
+//$color-success: $color-green;
+$color-error: $color-shamrock;
+
+$color-focus: rgb(70, 225, 160); //$color-shamrock
+$color-focus-bg: rgba(44, 179, 154, .3);
+$color-focus-bg-light: rgba(44, 179, 154, .2);

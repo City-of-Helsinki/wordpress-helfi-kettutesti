@@ -1,0 +1,135 @@
+.icon-linklist {
+
+	//
+	// DEFAULT CONTNENT WRAPPER CLASS ------------------
+	//
+
+	position: relative;
+
+	&__wrapper {
+		@include site-wrapper;
+		@include grid-base;
+		padding: 0;
+
+		margin-left: auto;
+		margin-right: auto;
+		justify-items: center;
+
+		padding-top: 80px;
+		padding-bottom: 104px;
+
+		padding-left: 16px;
+		padding-right: 16px;
+
+		@include breakpoint($tablet) {
+
+		}
+
+		@include breakpoint($desktop) {
+			padding-left: 16px;
+			padding-right: 16px;
+			padding-top: 144px;
+			padding-bottom: 60px;
+		}
+	}
+
+	//
+	// DEFAULT LAYOUTS CLASSES -------------------------
+	//
+
+	&__title {
+		color: $color-black;
+		font-size: 28px;
+		line-height: 40px;
+		font-weight: 700;
+		margin: 0;
+		margin-bottom: 64px;
+
+		grid-column: 1/span 4;
+
+		text-align: center;
+
+		@include breakpoint($tablet) {
+			text-align: left;
+			grid-column: 1/span 12;
+		}
+
+		@include breakpoint($desktop) {
+			margin-bottom: 128px;
+			font-size: 40px;
+			line-height: 48px;
+		}
+	}
+
+	&__listing {
+		list-style-type: none;
+		display: flex;
+		width: 100%;
+		margin: 0;
+		padding: 0 0 24px 0;
+		grid-column: 1/span 4;
+		//@include grid-base;
+		grid-column-gap: inherit;
+
+		justify-content: center;
+		align-items: stretch;
+		flex-wrap: wrap;
+
+		@include breakpoint($tablet) {
+			grid-column: 1/span 12;
+
+		}
+
+		&-link {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			height: 100%;
+
+		}
+
+		&-break {
+			display: block;
+			width: 100%;
+		}
+
+		&-item {
+			position: relative;
+			max-width: 200px;
+			margin-bottom: 32px;
+			margin-left: 32px;
+			margin-right: 32px;
+
+			@include focus-within();
+
+			@include breakpoint($tablet) {
+				margin-bottom: 80px;
+			}
+		}
+
+		&-image {
+			max-width: 100%;
+			margin-bottom: 32px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&-text {
+			color: $color-black;
+			font-size: 16px;
+			line-height: 24px;
+			margin-top: 0;
+			margin-bottom: 0;
+			text-align: center;
+			min-height: 56px;
+
+			@include breakpoint($desktop) {
+				font-size: 20px;
+				line-height: 28px;
+			}
+		}
+
+	}
+
+}

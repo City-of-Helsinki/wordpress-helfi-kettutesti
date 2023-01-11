@@ -1,0 +1,22 @@
+{{call 'setupLayoutData'}}
+
+<section {{#if anchor_id}}id="{{anchor_id}}"{{/if}} class="some-navigation " style="">
+
+    <div class="some-navigation__wrapper">
+
+        {{>some-rectangle.hbs}}
+        <ul class="some-navigation__list">
+            {{#each ../menus.footer-some}}
+                <li class="some-navigation__list-item">
+                    <a class="some-navigation__list-link" href="{{url}}">
+                        <img src="{{icon_white}}" class="some-navigation__list-link-icon" alt="{{title}}">
+                    </a>
+                </li>
+            {{/each}}
+
+        </ul>
+
+    </div>
+</section>
+
+

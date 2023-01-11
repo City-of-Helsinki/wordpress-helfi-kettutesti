@@ -1,0 +1,58 @@
+.timeline {
+
+	//
+	// DEFAULT CONTNENT WRAPPER CLASS ------------------
+	//
+	padding-bottom: 64px;
+	overflow: hidden;
+
+	@include breakpoint($desktop) {
+		padding-bottom: 104px;
+	}
+
+	&__wrapper {
+
+		max-width: 1920px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 16px;
+		position: relative;
+	}
+
+	//
+	// DEFAULT LAYOUTS CLASSES -------------------------
+	//
+
+	&__image {
+		height: 374px;
+		max-width: none;
+
+	}
+
+	//
+	// DEFAULT LAYOUT THEMING CLASSES ------------------
+	//
+
+	.swiper-scrollbar {
+		position: absolute;
+		left: 10%;
+
+		bottom: -32px;
+		z-index: 50;
+		height: 6px;
+		border-radius: 3px;
+		width: 80%;
+		background: lighten($color-mandy, 30%);
+
+		@include breakpoint($desktop) {
+			bottom: -48px;
+		}
+
+		.swiper-scrollbar-drag {
+			background: #C631DE;
+			width: 10px;
+			height: 6px;
+			border-radius: 3px;
+		}
+	}
+}

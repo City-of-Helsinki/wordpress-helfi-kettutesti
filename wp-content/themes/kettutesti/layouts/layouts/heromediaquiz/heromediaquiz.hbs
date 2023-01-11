@@ -1,0 +1,167 @@
+{{call 'setupLayoutData'}}
+
+<section id="{{anchor_id}}" class="heromediaquiz" style="">
+
+{{next_uid}}
+
+<div 
+class="heromediaquiz__wrapper ">
+
+        <div 
+        class="
+        heromediaquiz__wrapper-smallimgdiv 
+        xm:block sm:block hidden relative">
+        <div 
+        class="
+        xm:flex sm:flex justify-between">
+            <img 
+            src="{{this.heroimages.3.url}}" 
+            class="
+            xm:w-[25%] sm:w-[25%]  xm:ml-[-30px] sm:ml-[-30px] mt-[-100px] z-[-1]" 
+            alt=""
+            aria-hidden="true" />
+            <img 
+            src="{{this.heroimages.1.url}}" 
+            class="
+            xm:w-[40%] sm:w-[40%]  xm:mx-auto sm:mx-auto mb-[-50px]" 
+            alt="" 
+            aria-hidden="true" />
+            <img 
+            src="{{this.heroimages.0.url}}" 
+            class="
+            xm:w-[25%] sm:w-[25%] xm:mt-[-30px] sm:mt-[-30px]" 
+            alt="" 
+            aria-hidden="true" />
+        </div>
+         <img 
+         src="{{this.heroimages.2.url}}" 
+         alt="" 
+         class="
+         absolute w-[20%] right-0 bottom-[-65px]"
+         aria-hidden="true" />
+    </div>
+
+
+        <div 
+        class="
+        heromediaquiz_wrapper-hero 
+        xm:w-10/12 sm:w-10/12 w-full 
+        xm:block sm:block grid grid-cols-4 
+        xm:mt-8 mt-20
+        xm:mx-auto sm:mx-auto mx-0">
+    <img 
+    src="{{this.heroimages.3.url}}" 
+    alt="" 
+    class="
+    xm:hidden sm:hidden flex 
+    w-8/12 lg:w-6/12 xl:w-auto"
+    aria-hidden="true" />
+    <div 
+    class="col-span-2">
+        <img 
+        src="{{this.heroimages.1.url}}" 
+        alt="" 
+        class="
+        xm:hidden sm:hidden flex 
+        w-8/12 md:w-5/12 lg:w-3/12 xl:w-auto"
+        aria-hidden="true" />
+        <span 
+        id="qcount"
+        tabindex="-1" 
+        class="
+        font-semibold block 
+        mt-6 md:mt-8 lg:mt-10 xl:mt-10 
+        text-lg md:text-2xl lg:text-3xl xl:text-3xl">
+        </span>
+        {{!-- <h1 class="text-red-500 font-bold text-3xl md:text-4xl lg:text-5xl xl:text-7xl mt-6 md:mt-10 lg:mt-10 xl:mt-10" id="question"></h1> --}}
+            <div 
+            class="my-10" 
+            id="optionCont"></div>
+    </div>
+
+    <div 
+    class="grow-1 relative">
+        <img 
+            src="{{this.heroimages.2.url}}" 
+            alt="" 
+            class="
+            absolute 
+            xm:hidden sm:hidden flex 
+            right-0 -top-10 
+            w-8/12 lg:w-6/12 xl:w-auto"
+            aria-hidden="true" />
+        <img src="{{this.heroimages.0.url}}" 
+            alt="" 
+            class="
+            absolute 
+            xm:hidden sm:hidden flex
+            right-0 bottom-0 
+            w-8/12 lg:w-4/12 xl:w-auto"
+            aria-hidden="true" />
+    </div>
+</div>
+</div>
+
+<div 
+class="
+heromediaquiz_wrapper-buttons 
+flex justify-between 
+xm:w-10/12 sm:w-10/12 w-6/12 
+mx-auto my-8 md:my-8 lg:my-10 xl:my-12">
+    <button 
+    id="previous" 
+    class="
+    btn
+    bg-green-600 
+    text-white hover:bg-green-500 hover:text-white 
+    font-bold py-2 px-4 
+    xm:text-sm sm:text-base text-xl 
+    rounded mt-5 
+    xm:ml-0 sm:ml-0 ml-3 
+    xm:block sm:block inline">
+     <span aria-hidden="true">&#8592;</span> {{buttonnames.0.button1}}
+     </button>
+    <button 
+    id="next" 
+    class="
+    btn
+    bg-green-600 
+    text-white 
+    hover:bg-green-500 hover:text-white 
+    font-bold py-2 px-4 
+    xm:text-sm sm:text-base text-xl
+    rounded mt-5 
+    xm:ml-0 sm:ml-0 ml-3 
+    xm:block sm:block inline">{{buttonnames.0.button2}} <span aria-hidden="true">&#8594;</span></button>
+    <button 
+    id="result" 
+    class="
+    btn
+    bg-green-600 
+    text-white 
+    hover:bg-green-500 hover:text-white font-bold 
+    py-2 px-4 
+    xm:text-base sm:text-base text-xl 
+    rounded mt-5 
+    xm:ml-0 sm:ml-0 ml-3 
+    xm:block sm:block inline">
+    {{buttonnames.0.button3}}
+    </button>
+</div>
+
+
+<script>
+   window.myData{{uid}}= {{jsonData}}
+   window.resultlink{{uid}}= {{resultpagelink}}
+   window.quiztag= {{quiztag}}
+
+           window.addEventListener('load', (event) => {
+            if(!window.location.href.includes(`?${window.quiztag}`)) {
+                history.pushState({id:{}}, "", `?${window.quiztag}=1`);
+                document.title=`Kysymys:${window.myData1[0].quiz.question}`;
+            };
+        });
+</script>
+
+</section>
+

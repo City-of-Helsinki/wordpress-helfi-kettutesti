@@ -1,0 +1,13 @@
+@mixin layout-margins() {
+	//margin-top: 16px;
+	margin-bottom: 64px;
+
+	@include breakpoint($tablet) {
+		//margin-top: 24px;
+		margin-bottom: 80px;
+	}
+	@include breakpoint($desktop) {
+		//margin-top: 24px;
+		margin-bottom: 120px;
+	}
+}

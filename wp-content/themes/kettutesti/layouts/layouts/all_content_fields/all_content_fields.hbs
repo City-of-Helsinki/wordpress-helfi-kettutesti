@@ -1,0 +1,175 @@
+{{call 'setupLayoutData'}}
+
+<section {{#if anchor_id}}id="{{anchor_id}}"{{/if}} class="all-content-fields{{#if grey_background}} theme__grey-background{{/if}}{{#if reverse_content}} theme__reverse-content{{/if}}{{#if bg-image}} has__bg-image{{/if}} " style="{{#if bg-image}} background-image:url({{bg-image}});{{/if}}">
+
+<div class="all-content-fields__wrapper">
+
+
+
+{{! ************* Field: title ************* }}
+
+{{#if title}}
+<h2 class="all-content-fields__title">{{title}}</h2>
+{{/if}}
+
+
+
+{{! ************* Field: text ************* }}
+
+{{#if text}}
+<p class="all-content-fields__text">{{{text}}}</p>
+{{/if}}
+
+
+
+{{! ************* Field: wysiwyg ************* }}
+
+{{#if wysiwyg}}
+<div class="all-content-fields__wysiwyg">{{{wysiwyg}}}</div>
+{{/if}}
+
+
+
+{{! ************* Field: link ************* }}
+
+{{#if link}}
+<a href="{{link.url}}" class="all-content-fields__link" 
+		{{#if link.target}}target="{{link.target}}"{{/if}}>{{link.title}}</a>
+{{/if}}
+
+
+
+{{! ************* Field: image ************* }}
+
+{{#if image}}
+{{#if image.caption}}
+  <figure class="all-content-fields__image-figure">
+    <img class="all-content-fields__image-image" src="{{image.url}}" {{#if image.srcset}}srcset="{{image.srcset}}"{{/if}}
+ {{#if image.alt}}alt="{{image.alt}}"{{/if}}
+ {{#if image.title}}title="{{image.title}}"{{/if}}
+>
+    <figcaption class="all-content-fields__image-caption">{{image.caption}}</figcaption>
+  </figure>
+{{else}}
+  <img class="all-content-fields__image" src="{{image.url}}" {{#if image.srcset}}srcset="{{image.srcset}}"{{/if}}
+ {{#if image.alt}}alt="{{image.alt}}"{{/if}}
+ {{#if image.title}}title="{{image.title}}"{{/if}}
+>
+{{/if}}
+{{/if}}
+
+
+
+{{! ************* Field: gallery ************* }}
+
+  {{#if gallery}}
+<ul class="gallery all-content-fields__gallery">
+  {{#each gallery as |image|}}
+    <li class="gallery__list-item">
+
+      {{! ************* Subfield: image ************* }}
+
+{{#if image}}
+{{#if image.caption}}
+  <figure class="gallery__image-figure">
+    <img class="gallery__image-image" src="{{image.url}}" {{#if image.srcset}}srcset="{{image.srcset}}"{{/if}}
+ {{#if image.alt}}alt="{{image.alt}}"{{/if}}
+ {{#if image.title}}title="{{image.title}}"{{/if}}
+>
+    <figcaption class="gallery__image-caption">{{image.caption}}</figcaption>
+  </figure>
+{{else}}
+  <img class="gallery__image" src="{{image.url}}" {{#if image.srcset}}srcset="{{image.srcset}}"{{/if}}
+ {{#if image.alt}}alt="{{image.alt}}"{{/if}}
+ {{#if image.title}}title="{{image.title}}"{{/if}}
+>
+{{/if}}
+{{/if}}
+
+    </li>
+  {{/each}}
+</ul>
+{{/if}}
+
+
+
+{{! ************* Field: item-group ************* }}
+
+{{#if item-group}}
+<div class="all-content-fields__item-group" >
+  {{#with item-group}}
+
+{{! ************* Subfield: teksti ************* }}
+
+{{#if text}}
+<p class="all-content-fields__item-group__text">{{{text}}}</p>
+{{/if}}
+
+
+{{! ************* Subfield: kuva ************* }}
+
+{{#if kuva}}
+{{#if kuva.caption}}
+  <figure class="all-content-fields__item-group__kuva-figure">
+    <img class="all-content-fields__item-group__kuva-image" src="{{kuva.url}}" {{#if kuva.srcset}}srcset="{{kuva.srcset}}"{{/if}}
+ {{#if kuva.alt}}alt="{{kuva.alt}}"{{/if}}
+ {{#if kuva.title}}title="{{kuva.title}}"{{/if}}
+>
+    <figcaption class="all-content-fields__item-group__kuva-caption">{{kuva.caption}}</figcaption>
+  </figure>
+{{else}}
+  <img class="all-content-fields__item-group__kuva" src="{{kuva.url}}" {{#if kuva.srcset}}srcset="{{kuva.srcset}}"{{/if}}
+ {{#if kuva.alt}}alt="{{kuva.alt}}"{{/if}}
+ {{#if kuva.title}}title="{{kuva.title}}"{{/if}}
+>
+{{/if}}
+{{/if}}
+
+  {{/with}}
+</div>
+{{/if}}
+
+
+
+{{! ************* Field: posts ************* }}
+
+{{#if posts}}
+<ul class="all-content-fields__posts">
+  {{#each posts as |post|}}
+    <li class="all-content-fields__posts-list-item">
+      <div class="all-content-fields__posts-list-item-image-wrapper">
+
+{{! ************* Subfield: image ************* }}
+
+{{#if image}}
+{{#if image.caption}}
+  <figure class="all-content-fields__posts__image-figure">
+    <img class="all-content-fields__posts__image-image" src="{{image.url}}" {{#if image.srcset}}srcset="{{image.srcset}}"{{/if}}
+ {{#if image.alt}}alt="{{image.alt}}"{{/if}}
+ {{#if image.title}}title="{{image.title}}"{{/if}}
+>
+    <figcaption class="all-content-fields__posts__image-caption">{{image.caption}}</figcaption>
+  </figure>
+{{else}}
+  <img class="all-content-fields__posts__image" src="{{image.url}}" {{#if image.srcset}}srcset="{{image.srcset}}"{{/if}}
+ {{#if image.alt}}alt="{{image.alt}}"{{/if}}
+ {{#if image.title}}title="{{image.title}}"{{/if}}
+>
+{{/if}}
+{{/if}}
+
+      </div>
+      <a href="{{permalink}}" class="all-content-fields__posts-list-item-link">
+        <span class="all-content-fields__posts-list-item-title">{{post_title}}</span>
+      </a>
+    </li>
+  {{/each}}
+</ul>
+{{/if}}
+
+
+</div>
+
+
+</section>
+

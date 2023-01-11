@@ -1,0 +1,142 @@
+
+.error404 {
+	&__wrapper {
+
+		@include site-wrapper;
+		@include grid-base;
+
+		padding-bottom: 32px;
+
+		margin-bottom: 56px;
+		padding-top: 32px;
+
+		text-align: center;
+
+		@include breakpoint($tablet) {
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 88px;
+			padding-top: 72px;
+			padding-bottom: 56px;
+
+		}
+
+		@include breakpoint($desktop) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	&__splash {
+		margin-left: auto;
+		margin-right: auto;
+		grid-column: 1 / span 6;
+		margin-bottom: 32px;
+
+		@include breakpoint($tablet-small) {
+			grid-column: 2/span 4;
+		}
+		@include breakpoint($tablet) {
+			grid-column: 3 / span 8;
+
+		}
+		@include breakpoint($desktop) {
+			grid-column: 4 / span 6;
+		}
+	}
+
+	&__title {
+		grid-column: 1 / span 6;
+		font-size: 30px;
+		line-height: 40px;
+
+		margin-bottom: 24px;
+
+		max-width: 1200px;
+		padding-left: 16px;
+		padding-right: 16px;
+
+		@include breakpoint($mobile-large) {
+			padding-left: 32px;
+			padding-right: 32px;
+		}
+		@include breakpoint($tablet-small) {
+			grid-column: 2/span 4;
+		}
+		@include breakpoint($tablet) {
+			padding: 0;
+			grid-column: 3 / span 8;
+
+		}
+		@include breakpoint($desktop) {
+			grid-column: 4 / span 6;
+			font-size: 40px;
+			line-height: 56px;
+
+		}
+
+	}
+
+	&__text {
+		grid-column: 1 / span 6;
+		margin-top: 0;
+		margin-bottom: 32px;
+		padding-left: 16px;
+		padding-right: 16px;
+		font-size: 20px;
+		line-height: 32px;
+
+		@include breakpoint($mobile-large) {
+			padding-left: 32px;
+			padding-right: 32px;
+		}
+		@include breakpoint($tablet-small) {
+			grid-column: 2/span 4;
+		}
+		@include breakpoint($tablet) {
+			padding: 0;
+			grid-column: 3 / span 8;
+		}
+		@include breakpoint($desktop) {
+			grid-column: 4 / span 6;
+
+			margin-bottom: 48px;
+
+		}
+	}
+
+	.search-form {
+		grid-column: 1 / span 6;
+		max-width: 568px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+
+		@include breakpoint($tablet-small) {
+			grid-column: 2/span 4;
+		}
+		@include breakpoint($tablet) {
+			grid-column: 3 / span 8;
+		}
+		@include breakpoint($desktop) {
+			grid-column: 4 / span 6;
+			margin-bottom: 80px;
+		}
+	}
+
+	&__home-btn {
+		grid-column: 1 / span 6;
+		justify-self: center;
+		margin-top: 0;
+
+		@include breakpoint($tablet-small) {
+			grid-column: 2/span 4;
+		}
+		@include breakpoint($tablet) {
+			grid-column: 3 / span 8;
+		}
+		@include breakpoint($desktop) {
+			grid-column: 4 / span 6;
+		}
+	}
+}

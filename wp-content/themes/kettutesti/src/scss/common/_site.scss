@@ -1,0 +1,97 @@
+html,
+body {
+	min-height: 100vh;
+}
+
+html {
+	background: $color-body;
+	font-size: 62.5%;
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: $color-tap-highlight;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+html[class] {
+	@include breakpoint(max-width 1023px) {
+		margin-top: 0 !important;
+	}
+}
+
+body {
+	margin: 0px;
+	width: 100%;
+	padding: 0;
+	min-width: 320px;
+	background: $color-body;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	@include letter-spacing(20);
+
+	&.nav_open {
+		overflow: hidden;
+	}
+}
+
+.site-main {
+	//flex: 1 0 auto;
+	//max-width: 100%;
+	//overflow: hidden;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap; /* added line */
+}
+
+*:focus {
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
+[data-whatintent='mouse']
+	*:not(input):not(button):not(.btn):not(textarea):not(.cc-btn):focus {
+	outline: none !important;
+	background-color: inherit !important;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#wpadminbar {
+	@include breakpoint(max-width 1023px) {
+		display: none !important;
+	}
+}
+
+.hide-in-mobile {
+	@include breakpoint(max-width 1279px) {
+		display: none !important;
+	}
+}
+
+.show-in-mobile {
+	@include breakpoint(max-width 1279px) {
+		display: block !important;
+	}
+}
+
+.hide-in-desktop {
+	@include breakpoint(1280px) {
+		display: none !important;
+	}
+}
+
+.show-in-desktop {
+	@include breakpoint(1280px) {
+		display: block !important;
+	}
+}

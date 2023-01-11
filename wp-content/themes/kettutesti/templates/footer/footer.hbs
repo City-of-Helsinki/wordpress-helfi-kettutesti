@@ -1,0 +1,51 @@
+<footer 
+class="footer w-full mt-auto">
+    <div 
+    class="
+    footer__wrapper 
+    topnav 
+    flex justify-center items-center" 
+    style="
+    background-image: url({{footer.bgfooter.url}});
+    background-repeat:repeat-x;height:225px;">
+
+<div 
+class="
+footer__container 
+xm:block sm:block xm:text-center sm:text-center flex justify-between w-11/12">
+
+    <div 
+    class="footer__logo">
+
+        {{#if footer.logofoot}}
+            <img 
+            class="
+            footer__logo-image 
+            xm:w-[20%] sm:w-[20%] xm:mx-auto sm:mx-auto w-auto 
+            ml-10 xm:mb-4 sm:mb-4" 
+            src="{{footer.logofoot.url}}" alt="" title="">  
+        {{/if}}    
+
+    </div>
+
+    <div 
+    class="footer__links">
+                   <a 
+                   href="{{footer.linksfoot.0.linkfoot1}}" 
+                   class="mr-3 font-semibold 
+                   xm:text-xs text-base">
+                   {{footer.linknames.0.name1}}
+                   </a>
+                   <span>|</span>
+                    <a href="{{footer.linksfoot.0.linkfoot2}}" 
+                    class="ml-3 font-semibold
+                    xm:text-xs text-base">
+                    {{footer.linknames.0.name2}}
+                    </a>  
+    </div>
+
+    <div class="footer_end"></div>
+
+</div>
+
+</footer>

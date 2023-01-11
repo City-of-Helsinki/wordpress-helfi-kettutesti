@@ -1,0 +1,34 @@
+.cc-window {
+	.cc-btn {
+		border-radius: 28px;
+		line-height: 56px;
+		font-weight: 700;
+		font-size: 15px;
+		padding: 0 32px;
+		min-width: 0 !important;
+		border: 0 none;
+
+		@include focus();
+		transition: background-color .3s ease;
+
+		&:hover, &:focus {
+			background-color: $color-tapestry !important;
+			text-decoration: none;
+		}
+	}
+
+	.cc-message {
+		font-size: 16px;
+	}
+
+	.cc-link {
+		font-weight: 700;
+		color: $color-shamrock !important;
+
+		@include focus-inline();
+
+		&:hover, & focus {
+			color: $color-shamrock !important;
+		}
+	}
+}

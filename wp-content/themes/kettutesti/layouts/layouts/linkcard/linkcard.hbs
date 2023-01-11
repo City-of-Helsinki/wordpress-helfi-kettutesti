@@ -1,0 +1,40 @@
+{{call 'setupLayoutData'}}
+
+<section id="{{anchor_id}}" class="linkcard " style="">
+
+    <div class="linkcard__wrapper 
+    xm:w-11/12 sm:w-11/12 w-8/12 
+    mx-auto xm:mb-10 mb-15">
+        
+        {{#if this.cardimg}}
+
+            <img src="{{this.cardimg.url}}" alt="card image" aria-hidden="true"/>
+
+        {{/if}}
+
+        <p 
+        class=" 
+        text-lg md:text-xl lg:text-2xl xl:text-3xl 
+        mt-6 md:mt-8 lg:mt-10 xl:mt-12 mb-6 md:mb-8 lg:mb-10 xl:mb-12 "
+        >
+        {{this.cardinfo}}
+        </p>
+
+    {{#if this.cardlink.url}}
+    <a href="{{this.cardlink.url}}"
+     target="_blank" 
+     title="Linkki aukeaa uuteen ikkunaan"
+     aria-label="Tämä linkki aukeaa uuteen ikkunaan"
+     class="
+     bg-green-600 
+     text-white font-bold 
+     py-2 px-4 
+     xm:text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 
+     rounded 
+     inline no-underline">{{this.cardlink.title}}</a>
+     {{/if}}
+
+</div>
+
+</section>
+

@@ -1,0 +1,47 @@
+.hero {
+
+    //
+    // DEFAULT CONTNENT WRAPPER CLASS ------------------
+    //
+
+    &__wrapper {
+
+       background-color: #DCC6BB;
+       min-height: 90vh;
+       margin: 0;
+       padding: 1% 0; 
+       position: relative;
+     }
+
+    //
+    // DEFAULT LAYOUTS CLASSES -------------------------
+    //
+
+    &__title {
+        color:"red";
+     }
+
+     &__text {
+    color: red;
+    font-size: 12px;
+    } 
+
+    &__image { 
+        &-figure { }
+        &-image {
+            width: 50vw;
+            margin: 0;
+            position: absolute;
+            bottom:50px;
+            right:50px;
+
+
+         }
+        &-caption { }
+    }
+
+    //
+    // DEFAULT LAYOUT THEMING CLASSES ------------------
+    //
+
+}

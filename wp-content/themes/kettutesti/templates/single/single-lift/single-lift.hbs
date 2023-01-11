@@ -1,0 +1,34 @@
+{{#if link}}
+    <li class="single-lift-wrapper">
+        <a class="single-lift" href="{{link.url}}" target="{{link.target}}">
+
+            {{#if image}}
+                <img class="single-lift__image" src="{{image.url}}"
+                     {{#if image.srcset}}srcset="{{image.srcset}}"{{/if}}
+                    {{#if image.alt}}alt="{{image.alt}}"{{/if}}
+                    {{#if image.title}}title="{{image.title}}"{{/if}}
+                >
+            {{/if}}
+            <span class="single-lift__pubdate">{{#if
+                    date_text}}{{date_text}}{{else}}&nbsp;{{/if}}</span>
+
+            {{#if text}}
+                <p class="single-lift__title">{{{text}}}</p>
+            {{/if}}
+            {{> icon-link-arrow.hbs}}
+        </a>
+    </li>
+{{else}}
+    <li class="single-lift-wrapper">
+        <a class="single-lift" href="{{url}}">
+            <img class="single-lift__image" src="{{attachment.sizes.articlelift.url}}"
+                 srcset="{{attachment.sizes.articlelift.url}} 1x, {{attachment.sizes.articlelift-2x.url}} 2x"
+                 {{#if image.alt}}alt="{{image.alt}}"{{/if}}
+                {{#if image.title}}title="{{image.title}}"{{/if}}
+            >
+            <span class="single-lift__pubdate">{{nice_date}}</span>
+            <p class="single-lift__title">{{post_title}}</p>
+            {{> icon-link-arrow.hbs}}
+        </a>
+    </li>
+{{/if}}

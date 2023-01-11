@@ -1,0 +1,28 @@
+.breadcrumb {
+  font-family: $font-family-body;
+  @include site-wrapper;
+  width: 100%;
+  margin-bottom: 24px;
+
+  &__wrapper {
+    list-style-type: none;
+  }
+
+  &__item {
+    position: relative;
+    float: left;
+
+    &:not(:first-child):before {
+      content: "›";
+      color: $color-jungle-green;
+      margin: 0 16px;
+    }
+  }
+
+  &__link {
+    color: $color-black;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+}

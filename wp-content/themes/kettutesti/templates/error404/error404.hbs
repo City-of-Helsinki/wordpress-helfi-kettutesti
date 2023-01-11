@@ -1,0 +1,19 @@
+<section class="error404">
+    <div class="error404__wrapper">
+        <svg class="error404__splash" width="152" height="80" viewBox="0 0 152 80" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M96 56L96 28C96 12.536 108.536 -1.36149e-05 124 -1.1587e-05C139.464 -9.55918e-06 152 12.536 152 28C152 43.464 139.464 56 124 56L96 56Z"
+                  fill="#DCF000"/>
+            <path d="M80 80L40 80C17.9086 80 1.56562e-06 62.0914 3.49691e-06 40C5.4282e-06 17.9086 17.9086 -5.4282e-06 40 -3.49691e-06C62.0914 -1.56562e-06 80 17.9086 80 40L80 80Z"
+                  fill="#B4DCA0"/>
+        </svg>
+
+        <h1 class="error404__title">{{error404.title}}</h1>
+        <p class="error404__text">{{error404.text}}</p>
+        {{> search-form.hbs}}
+
+        <a class="error404__home-btn btn" href="{{wp.home_url}}">{{error404.button-text}}</a>
+
+    </div>
+
+</section>

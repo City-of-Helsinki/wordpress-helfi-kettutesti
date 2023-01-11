@@ -1,0 +1,107 @@
+.map {
+
+	position: relative;
+
+	@include breakpoint(max-width 1023px) {
+		background: none !important;
+	}
+
+	@include breakpoint($desktop) {
+		background-size: cover;
+		background-attachment: fixed;
+		height: 200vh;
+		background-position: 30% center;
+		padding-left: 16px;
+		padding-right: 16px;
+
+		-webkit-box-shadow: inset 0px 0px 80px -40px rgba(33, 33, 33, 1);
+		-moz-box-shadow: inset 0px 0px 80px -40px rgba(33, 33, 33, 1);
+		box-shadow: inset 0px 0px 80px -40px rgba(33, 33, 33, 1);
+	}
+
+	@include breakpoint($desktop) {
+		background-position: right top;
+	}
+
+	//
+	// DEFAULT CONTNENT WRAPPER CLASS ------------------
+	//
+
+	&__wrapper {
+	}
+
+	//
+	// DEFAULT LAYOUTS CLASSES -------------------------
+	//
+
+	&__mobile-image {
+		width: 100%;
+		display: block;
+		position: relative;
+		@include breakpoint($desktop) {
+			display: none;
+		}
+	}
+
+	&__text {
+
+		font-size: 16px;
+		line-height: 22px;
+
+		color: $color-white;
+		padding: 64px 32px;
+		position: relative;
+
+		margin-top: 0;
+		width: 100%;
+		margin-bottom: 0;
+		overflow: hidden;
+		background: $color-tapestry;
+
+		&:after {
+			@include breakpoint($desktop) {
+				content: '';
+				position: absolute;
+				width: 300%;
+				height: 300%;
+				top: -50%;
+				left: 0;
+				background: $color-tapestry;
+				transform-origin: 50% 50%;
+				transform: rotate(-25deg);
+				z-index: -1;
+			}
+		}
+
+		@include breakpoint($desktop) {
+			background: transparent;
+			position: absolute;
+			top: 50%;
+
+			width: calc(100% - 32px);
+			overflow: hidden;
+
+			box-shadow: 21px 29px 27px rgba(0, 0, 0, .2);
+
+			max-width: 480px;
+			font-size: 20px;
+			line-height: 32px;
+			left: 55%;
+			transform: translate(0, -50%);
+			padding: 112px 56px 96px 64px;
+
+		}
+
+	}
+
+	//
+	// DEFAULT LAYOUT THEMING CLASSES ------------------
+	//
+
+	&.theme__cut-top-corner {
+	}
+
+	&.theme__cut-bottom-corner {
+	}
+
+}

@@ -1,0 +1,56 @@
+{{call 'setupLayoutData'}}
+
+<section {{#if anchor_id}}id="{{anchor_id}}"{{/if}} class="postlist{{#if
+        extra_margin.top}} theme__extra-margin--top{{/if}}{{#if
+        extra_margin.bottom}} theme__extra-margin--bottom{{/if}}" style="">
+
+    <div class="postlist__wrapper">
+
+
+        {{! ************* Field: title ************* }}
+
+        {{#if title}}
+            <h2 class="postlist__title">{{title}}</h2>
+        {{/if}}
+
+
+
+        {{! ************* Field: posts ************* }}
+
+        {{#if posts}}
+            <ul class="postlist__posts">
+                {{#each posts as |post|}}
+                    <li class="postlist__posts-list-item">
+                        <a href="{{permalink}}" class="postlist__posts-list-item-link">
+
+
+                            {{! ************* Subfield: image ************* }}
+
+                            {{#if image}}
+
+                                <img class="postlist__posts-image" src="{{image.sizes.postlift.url}}"
+                                     srcset="{{image.sizes.postlift.url}} 1x, {{image.sizes.postlift-x2.url}} 2x"
+                                     {{#if image.alt}}alt="{{image.alt}}"{{/if}}
+                                    {{#if image.title}}title="{{image.title}}"{{/if}}
+                                >
+
+                            {{/if}}
+
+
+                            <span class="postlist__posts-list-item-title">{{post_title}}</span>
+                            {{>icon-link-arrow.hbs}}
+                        </a>
+
+
+                    </li>
+
+                {{/each}}
+            </ul>
+        {{/if}}
+
+
+    </div>
+
+
+</section>
+

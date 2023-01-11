@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+	h1 {
+		@apply text-red-500 font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl xm:my-3 sm:my-4 my-8 
+	}
+	h2 {
+		@apply text-red-500 font-bold text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl xm:my-3 sm:my-4 my-8 
+	}
+
+	h3	{
+		@apply text-red-500 font-semibold text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl xm:my-3 sm:my-4 my-8
+	}
+
+	p {
+		@apply text-lg md:text-xl lg:text-2xl xl:text-3xl 
+        xm:my-3 sm:my-4 my-8
+	} 
+	a {
+		@apply underline;
+	}
+}
+
+@layer components {
+	.wpml-ls-statics-footer.wpml-ls.wpml-ls-legacy-list-horizontal {
+		display: none;
+	}
+	
+	a.skip-to-content{
+		display: block;
+	}
+	
+	a.skip-to-content {
+		left: -999px;
+		position: absolute;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		z-index: -999;
+	}
+	a.skip-to-content:focus {
+		width: auto;
+		z-index: 99999;
+		top: 8px;
+		left: 16px;
+		display: inline-block;
+		color: white;
+		overflow: visible;
+		outline: 4px solid green;
+		outline-offset: 2px;
+		background-color: green;
+		height: 32px;			
+		line-height: 32px;					
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	@media (min-width: 640px) {
+		a.skip-to-content:focus {
+			height: 40px;
+			top: 16px;
+			left: 24px;
+			line-height: 40px;
+		}
+	}
+	[data-whatintent='mouse'] a.skip-to-content:focus {
+		left: -999px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		z-index: -999;
+	}
+	
+	.btn.disabled {
+		background-color: #808080;
+		color: black;
+		opacity: .8;
+	}
+	.btn.disabled:hover {
+		background-color: #808080;
+		color: black;
+		opacity: .5;
+	}
+}
+
+
+

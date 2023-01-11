@@ -1,0 +1,66 @@
+{{call 'setupLayoutData'}}
+
+<section id="{{anchor_id}}"
+class="
+topnav 
+flex justify-center items-center" 
+style="
+background-image: url({{this.bgimage.url}});
+background-repeat:repeat-x;height:130px;">
+
+<div 
+class="
+topnav__wrapper 
+flex justify-between 
+w-11/12">
+    <a 
+    href="{{homelink.url}}">
+    <img 
+    src="{{this.logo.url}}"
+    class="xm:w-[80%] w-auto no-underline" 
+    alt="cityLogo" aria-hidden="true"/></a>
+
+        <div>
+            {{#each wp_languages}}
+                    {{#unless active is 1}}
+                        <a 
+                        class="text-white 
+                        xm:text-xs text-base
+                        font-semibold no-underline" 
+                        href="{{url}}" 
+                        lang="{{language_code}}"
+                        title="{{native_name}}">
+                            {{native_name}}
+                        </a>
+                    {{/unless}}
+                {{/each}}
+        </div>
+
+        {{!-- <div 
+        class="
+        flex justify-between items-center 
+        w-25 text-white">
+           <a href="{{this.links.0.link1}}" 
+           class="
+           suomi
+           mr-3
+           xm:text-xs text-base
+           font-bold"
+           >
+           Suomeksi
+           </a>
+
+            <a href="{{this.links.0.link2}}" 
+            class="
+            svenska
+            ml-3 
+            xm:text-xs text-base
+            font-bold"
+            >
+            Svenska
+            </a>
+        </div>  --}}
+
+    </div>
+</section>
+

@@ -1,0 +1,239 @@
+@mixin hover-opacity() {
+
+	transition: opacity .15s ease;
+
+	&:hover {
+
+		@at-root [data-whatinput="initial"] & {
+			opacity: 0.7;
+		}
+
+		@at-root [data-whatinput="keyboard"][data-whatintent="mouse"] & {
+			opacity: 0.7;
+		}
+
+		@at-root [data-whatinput="mouse"] & {
+			opacity: 0.7;
+		}
+	}
+}
+
+@mixin hover-svg-green() {
+	path {
+		transition: fill .15s ease;
+	}
+
+	&:hover {
+
+		@at-root [data-whatinput="initial"] & {
+			path {
+				fill: $color-shamrock;
+			}
+		}
+
+		@at-root [data-whatinput="keyboard"][data-whatintent="mouse"] & {
+			path {
+				fill: $color-shamrock;
+			}
+		}
+
+		@at-root [data-whatinput="mouse"] & {
+			path {
+				fill: $color-shamrock;
+			}
+		}
+	}
+}
+
+@mixin hover-underline-blue($from: 'center', $offsetY : 0, $overflow: 4px) {
+	position: relative;
+
+	transition-property: color;
+	transition-duration: .15s;
+	transition-timing-function: ease;
+
+	&:before {
+		content: "";
+		position: absolute;
+
+		background-color: $color-shamrock;
+		transition-property: left, right;
+		transition-duration: .15s;
+		transition-timing-function: ease;
+
+		height: 4px;
+		bottom: $offsetY;
+
+		@if ($from == 'center') {
+
+			left: 51%;
+			right: 51%;
+		} @else {
+			left: 0;
+			right: 101%;
+		}
+
+	}
+
+	&:hover {
+		@at-root [data-whatinput="keyboard"][data-whatintent="mouse"] & {
+
+			color: lighten($color-shamrock, 8%);
+
+			&:before {
+
+				left: -$overflow;
+				right: -$overflow;
+
+			}
+		}
+
+		@at-root [data-whatinput="mouse"] & {
+
+			color: lighten($color-shamrock, 8%);
+
+			&:before {
+				left: -$overflow;
+				right: -$overflow;
+			}
+		}
+		@at-root [data-whatinput="initial"] & {
+
+			color: lighten($color-shamrock, 8%);
+
+			&:before {
+				left: -$overflow;
+				right: -$overflow;
+			}
+		}
+	}
+}
+
+@mixin hover-underline() {
+	&:hover {
+		@at-root [data-whatinput="keyboard"][data-whatintent="mouse"] & {
+			text-decoration: underline;
+		}
+
+		@at-root [data-whatinput="mouse"] & {
+			text-decoration: underline;
+		}
+
+		@at-root [data-whatinput="initial"] & {
+			text-decoration: underline;
+		}
+	}
+}
+
+@mixin hover-hamburger() {
+
+	&:hover {
+
+		opacity: 1 !important;
+		.hamburger-inner,
+		.hamburger-inner::before,
+		.hamburger-inner::after {
+			background-color: $color-white;
+		}
+
+	}
+
+	.hamburger-inner {
+		transition-duration: 0.075s;
+		transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+		transition: background-color .15s 0s ease,
+		transform .15s ease;
+
+		&::before {
+			transition: top 0.075s 0.12s ease,
+			opacity 0.075s ease,
+			background-color .15s 0s ease;
+		}
+
+		&::after {
+			transition: bottom 0.075s 0.12s ease,
+			transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+			background-color .15s 0s ease;
+		}
+	}
+
+	&.is-active {
+		.hamburger-inner {
+			transform: rotate(45deg);
+			transition-delay: 0.12s;
+			transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+			transition: transform .15s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1),
+			background-color .15s 0s ease;
+
+			&::before {
+				top: 0;
+				opacity: 0;
+				transition: top 0.075s ease,
+				opacity 0.075s 0.12s ease,
+				background-color .15s 0s ease;
+			}
+
+			&::after {
+				bottom: 0;
+				transform: rotate(-90deg);
+				transition: bottom 0.075s ease,
+				transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1),
+				background-color .15s 0s ease;
+			}
+		}
+	}
+}
+
+@mixin hover-spin-blue() {
+
+	transition: color .15s ease, transform .15s ease;
+
+	&:hover {
+
+		@at-root [data-whatinput="initial"] & {
+			color: $color-shamrock;
+			transform: rotate(270deg);
+		}
+
+		@at-root [data-whatinput="keyboard"][data-whatintent="mouse"] & {
+			color: $color-shamrock;
+			transform: rotate(270deg);
+		}
+
+		@at-root [data-whatinput="mouse"] & {
+			color: $color-shamrock;
+			transform: rotate(270deg);
+		}
+	}
+}
+
+@mixin hover-pagination() {
+	position: relative;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -8px;
+		left: 0;
+		height: 2px;
+		width: 100%;
+		background-color: $color-shamrock;
+		transform-origin: center top;
+		transform: scale(0, 1);
+		transition: transform 0.2s cubic-bezier(.22, .48, 0, .71);
+		will-change: transform;
+	}
+	&:active::before {
+		background-color: $color-shamrock;
+	}
+	&:hover::before, &:focus::before, &.-active::before {
+		transform-origin: center top;
+		transform: scale(1.1, 1);
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+}

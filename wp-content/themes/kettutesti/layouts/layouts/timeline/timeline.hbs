@@ -1,0 +1,23 @@
+{{call 'setupLayoutData'}}
+
+<section {{#if anchor_id}}id="{{anchor_id}}"{{/if}} class="timeline{{#if
+        background_color}} {{background_color}}{{/if}}" style="">
+
+    <div class="timeline__wrapper swiper-container">
+
+        <div class="swiper-wrapper">
+
+            {{#if image}}
+
+                <img class="timeline__image swiper-slide" src="{{image.url}}"
+                     {{#if image.alt}}alt="{{image.alt}}"{{/if}}
+                    {{#if image.title}}title="{{image.title}}"{{/if}}
+                >
+
+            {{/if}}
+
+        </div>
+        <div class="swiper-scrollbar"></div>
+    </div>
+</section>
+

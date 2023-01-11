@@ -1,0 +1,118 @@
+<!doctype html>
+<html {{wp.language_attributes}} class="no-js">
+
+<head>
+    <meta charset="{{wp.charset}}">
+    <link href="//www.google-analytics.com" rel="dns-prefetch">
+
+
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{wp.theme_url}}/img/favicon/apple-touch-icon.png?1">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{wp.theme_url}}/img/favicon/favicon-32x32.png?1">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{wp.theme_url}}/img/favicon/favicon-16x16.png?1">
+    <link rel="manifest" href="{{wp.theme_url}}/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="{{wp.theme_url}}/img/favicon/safari-pinned-tab.svg?1" color="#5bbad5">
+    <link rel="shortcut icon" href="{{wp.theme_url}}/img/favicon/favicon.ico?1">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="{{wp.theme_url}}/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="description" content="{{wp.description}}">
+
+
+    <!-- meta tags -->
+    {{#if this.resultinformation}}
+    <meta property="og:title" content="{{this.kettu.result.title}}">
+    <meta property="og:description" content="{{this.kettu.result.subtitle}}">
+    <meta property="og:url" content="{{this.pageurl}}">
+    <meta property="og:image" content="{{this.kettu-image}}">
+    {{/if}}
+
+    <!-- link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"/ -->
+  
+
+    <!-- script src="https://cmp.osano.com/169laxSJKM9wtUHj/d5e550e3-005d-4c08-9941-2c0fc33bb9f1/osano.js"></script -->
+    {{do_action 'wp_head'}}
+    <script src="{{wp.js_url}}" type="text/javascript"></script>
+
+   <script type="text/plain" data-consent="analytics">
+      var _paq = window._paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//webanalytics.digiaiiris.com/js/";
+        _paq.push(['setTrackerUrl', u+'tracker.php']);
+        _paq.push(['setSiteId', '909']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.src=u+'piwik.min.js'; s.parentNode.insertBefore(g,s);
+      })();
+  </script>
+    
+  <script type="text/plain" data-consent="analytics">
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:xxxxxx,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+</head>
+
+<body class="{{wp.bodyclass}} relative min-h-screen flex flex-col">
+
+<script>
+    var SITE_URL = '{{wp.home_url}}';
+</script>
+
+{{#if wp.maintenance}}
+    <h1 style="width:100%;text-align:center;padding:30% 0 30% 0;">Huoltokatko! Yritä myöhemmin uudelleen</h1>
+{{else}}
+    {{> header.hbs }}
+
+    <main class="site-main tmpl-{{ get_partial_base template_file }}" id="content">
+        {{> (get_partial template_file) }}
+    </main>
+
+
+    {{> footer.hbs }}
+
+    {{do_action 'wp_footer'}}
+{{/if}}
+
+<!-- script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script -->
+
+<script>
+
+    /*window.cookieconsent.initialise( {
+        'palette': {
+            'popup': {
+                'background': '#ebfaf4'
+            },
+            'button': {
+                'background': '#2cb39a',
+                'text': '#ffffff'
+            }
+        },
+        'theme': 'classic',
+        'content': {
+            'message': 'Käytämme tällä sivustolla evästeitä parantaaksemme käyttökokemusta. Käyttämällä sivustoamme hyväksyt tämän.',
+            'dismiss': 'OK',
+            'link': 'Katso tietosuojaseloste.',
+            'href': '/tietosuojaseloste/'
+        }
+    } );*/
+</script>
+</body>
+
+</html>

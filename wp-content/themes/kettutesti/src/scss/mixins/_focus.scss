@@ -1,0 +1,56 @@
+@mixin focus() {
+	&:focus {
+		@at-root [data-whatinput="initial"] & {
+			outline: 4px solid $color-focus;
+			outline-offset: 2px;
+			//background-color: $color-focus-bg;
+		}
+
+		@at-root [data-whatinput="keyborad"] & {
+			outline: 4px solid $color-focus;
+			outline-offset: 2px;
+			//background-color: $color-focus-bg;
+		}
+	}
+}
+
+@mixin focus-within() {
+	&:focus-within {
+		@at-root [data-whatinput="initial"] & {
+
+			outline: 4px solid $color-focus;
+			outline-offset: 2px;
+			//background-color: $color-focus-bg;
+			a {
+				outline: 0 none;
+			}
+		}
+
+		@at-root [data-whatinput="keyborad"] & {
+
+			outline: 4px solid $color-focus;
+			outline-offset: 2px;
+			//background-color: $color-focus-bg;
+			a {
+				outline: 0 none;
+			}
+		}
+	}
+}
+
+@mixin focus-inline() {
+
+	&:focus {
+		@at-root [data-whatinput="initial"] & {
+
+			outline: 1px solid $color-focus;
+			outline-offset: 1px;
+			//background-color: $color-focus-bg-light;
+		}
+
+		@at-root [data-whatinput="keyborad"] & {
+			outline: 1px solid $color-focus;
+			outline-offset: 1px;
+		}
+	}
+}

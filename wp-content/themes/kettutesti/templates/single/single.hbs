@@ -1,0 +1,63 @@
+<article class="tmpl-single__wrapper {{#if single_post.is_page}}{{/if}}">
+
+    <header class="tmpl-single__header {{#unless single_post.image }}tmpl-single__header--no-image{{/unless}}">
+
+        <div class="tmpl-single__header__text-wrapper">
+
+            {{#unless single_post.is_page}}
+                <div class="tmpl-single__meta-wrapper">
+                    <span class="tmpl-single__meta-date">{{pub_date}}</span>{{#if single_post.author_name}} | <span
+                        class="tmpl-single__meta-name">{{single_post.author_name}}</span>{{/if}}
+                </div>
+            {{/unless}}
+
+            <h1 class="tmpl-single__header__pageheading">{{ page.title }}</h1>
+
+            {{#if single_post.lead-paragraph }}
+                <p class="tmpl-single__header__lead-paragraph">{{ single_post.lead-paragraph }}</p>
+            {{/if}}
+
+        </div>
+
+    </header>
+
+    <div class="tmpl-single__content article-content">
+        {{#if single_post.image }}
+            <div class="tmpl-single__header__image-wrapper">
+                {{#with single_post.image}}
+                    <img class="tmpl-single__header__image"
+                         src="{{#if sizes.article}}{{sizes.article.url}}{{else}}{{url}}{{/if}}"
+                         {{#if image_meta.alt}}alt="{{image_meta.alt}}"{{/if}}
+                    >
+                    {{#if image_meta.description}}
+                        <span class="tmpl-single__header__image-desc">{{image_meta.description}}</span>
+                    {{/if}}
+                {{/with}}
+
+            </div>
+        {{/if}}
+
+        {{ single_post.post_content_wpautop }}
+
+        <div class="tmpl-single__shares">
+            <h3 class="tmpl-single__shares-heading">{{single_post.shares_heading}}</h3>
+
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{single_post.share_url}}"
+               target="_blank"><span
+                    class="visually-hidden">{{single_post.share_text_facebook}}</span>{{>icon-facebook-white.hbs}}</a>
+            <a href="https://twitter.com/share?text={{single_post.twitter_share_text}}&url={{single_post.share_url}}"
+               target="_blank"><span
+                    class="visually-hidden">{{single_post.share_text_twitter}}</span>{{>icon-twitter-white.hbs}}</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{single_post.share_url}}"
+               target="_blank"><span
+                    class="visually-hidden">{{single_post.share_text_linkedin}}</span>{{>icon-linkedin-white.hbs}}</a>
+        </div>
+
+        {{#if single_post.comment_template}}
+            {{single_post.comment_template}}
+        {{/if}}
+    </div>
+
+</article>
+
+{{> layouts.hbs }}

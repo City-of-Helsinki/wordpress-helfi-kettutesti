@@ -1,0 +1,92 @@
+.tmpl-layouts .theme__extra-margin {
+	&--top {
+		margin-top: 40px;
+
+		@include breakpoint($tablet) {
+			margin-top: 64px;
+		}
+
+		@include breakpoint($desktop) {
+			margin-top: 96px;
+		}
+	}
+
+	&--bottom {
+		margin-bottom: 56px;
+
+		@include breakpoint($tablet) {
+			margin-bottom: 64px;
+		}
+
+		@include breakpoint($desktop) {
+			margin-bottom: 104px;
+		}
+	}
+}
+
+.tmpl-layouts {
+	span.corner-top {
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 9;
+		border-top: 20px solid $color-white;
+		border-left: 60px solid transparent;
+
+		@include breakpoint($tablet) {
+
+			border-top: 86px solid $color-white;
+			border-left: 130px solid transparent;
+		}
+
+		@include breakpoint($desktop-large) {
+
+			border-top: 132px solid $color-white;
+			border-left: 200px solid transparent;
+		}
+	}
+
+	span.corner-bottom {
+		width: 0;
+		height: 0;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 9;
+
+		border-bottom: 32px solid $color-white;
+		border-right: 72px solid transparent;
+
+		@include breakpoint($tablet) {
+			border-bottom: 80px solid $color-white;
+			border-right: 136px solid transparent;
+		}
+
+		@include breakpoint($desktop-large) {
+			border-bottom: 132px solid $color-white;
+			border-right: 224px solid transparent;
+		}
+	}
+
+	.theme-blue {
+		background-color: $color-anakiwa;
+	}
+
+	.theme-green {
+		background-color: $color-shamrock;
+	}
+
+	.theme-yellow {
+		background-color: $color-barley-white;
+	}
+
+	.theme-white {
+		background-color: $color-white;
+	}
+
+	.theme-grey {
+		background-color: $color-alabaster;
+	}
+}

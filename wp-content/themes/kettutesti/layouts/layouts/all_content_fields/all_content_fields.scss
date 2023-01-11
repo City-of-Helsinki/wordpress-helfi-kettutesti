@@ -1,0 +1,75 @@
+.all-content-fields {
+
+    //
+    // DEFAULT CONTNENT WRAPPER CLASS ------------------
+    //
+
+    &__wrapper { }
+
+    //
+    // DEFAULT LAYOUTS CLASSES -------------------------
+    //
+
+    &__title { }
+
+    &__text { }
+
+    &__wysiwyg { }
+
+    &__link { }
+
+    &__image {
+
+        &-figure { }
+        &-image { }
+        &-caption { }
+    }
+
+    &__gallery { }
+
+    //TODO: move to separate file
+    .gallery {
+        &__list-item { }
+    &__image {
+
+        &-figure { }
+        &-image { }
+        &-caption { }
+    }
+
+    }
+
+    &__item-group {
+
+    &__text { }
+
+    &__kuva {
+
+        &-figure { }
+        &-image { }
+        &-caption { }
+    }
+
+    }
+
+
+    &__posts {
+
+        &-list-item { }
+        &-image { }
+        &-list-item-image-wrapper { }
+        &-list-item-link { }
+        &-list-item-title { }
+    }
+
+    //
+    // DEFAULT LAYOUT THEMING CLASSES ------------------
+    //
+
+    &.theme__grey-background{ }
+
+    &.theme__reverse-content{ }
+
+    &.has__bg-image{ }
+
+}

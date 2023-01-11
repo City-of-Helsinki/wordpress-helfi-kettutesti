@@ -1,0 +1,117 @@
+.postlist {
+	@include layout-margins;
+
+	&__wrapper {
+		@include site-wrapper;
+		@include grid-base;
+		//padding-top: 24px;
+
+		max-width: 688px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include breakpoint($tablet) {
+			max-width: 1440px;
+		}
+	}
+
+	&__title {
+		font-size: 28px;
+		line-height: 40px;
+		grid-column: 1 / span 6;
+		text-align: center;
+		margin-bottom: 48px;
+
+		@include breakpoint($tablet-small) {
+			grid-column: 2/span 4;
+		}
+		@include breakpoint($tablet) {
+			grid-column: 1 / span 12;
+		}
+	}
+
+	&__posts {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+
+		grid-column: 1 / span 6;
+
+		display: flex;
+		flex-direction: column;
+
+		@include breakpoint($tablet-small) {
+			grid-column: 2/span 4;
+		}
+		@include breakpoint($tablet) {
+			flex-direction: row;
+			grid-column: 1 / span 12;
+			margin-left: -16px;
+			margin-right: -16px;
+			justify-content: center;
+
+			flex-wrap: wrap;
+
+		}
+
+		&-list-item {
+			width: 100%;
+			max-width: 448px;
+
+			margin-left: 16px;
+			margin-right: 16px;
+			min-width: 312px;
+			margin-bottom: 56px;
+
+			position: relative;
+
+			@include breakpoint($tablet) {
+
+			}
+
+			.icon-link-arrow {
+				position: absolute;
+				bottom: 5px;
+				left: 2px;
+				width: 20px;
+				height: 14px;
+
+				@include breakpoint($tablet) {
+					left: 18px;
+				}
+			}
+		}
+
+		&-image {
+			border-radius: 16px;
+			margin-bottom: 32px;
+		}
+
+		&-list-item-title {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 24px;
+			color: $color-black;
+			display: block;
+
+			@include breakpoint($tablet) {
+				padding-left: 16px;
+				padding-right: 16px;
+
+				font-size: 20px;
+				line-height: 28px;
+			}
+
+		}
+
+		&-list-item-link {
+			display: block;
+			color: $color-black;
+			height: 100%;
+			padding-bottom: 40px;
+			border-radius: 16px 16px 0 0;
+			@include focus();
+		}
+	}
+
+}

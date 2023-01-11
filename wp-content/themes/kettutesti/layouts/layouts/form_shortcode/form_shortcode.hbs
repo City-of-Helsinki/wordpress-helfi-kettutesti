@@ -1,0 +1,30 @@
+{{call 'setupLayoutData'}}
+
+<section {{#if anchor_id}}id="{{anchor_id}}"{{/if}} class="form-shortcode{{#if
+        extra_margin.top}} theme__extra-margin--top{{/if}}{{#if
+        extra_margin.bottom}} theme__extra-margin--bottom{{/if}}" style="">
+
+    <div class="form-shortcode__wrapper">
+        {{! ************* Field: title ************* }}
+        <div class="form-shortcode__text-wrapper">
+
+            {{#if title}}
+                <h2 class="form-shortcode__title">{{title}}</h2>
+            {{/if}}
+
+            {{! ************* Field: text ************* }}
+
+            {{#if text}}
+                <p class="form-shortcode__text">{{{text}}}</p>
+            {{/if}}
+        </div>
+
+        {{! ************* Field: shortcode ************* }}
+
+        {{#if shortcode}}
+            <div class="form-shortcode__form-wrapper">{{do_shortcode shortcode}}</div>
+        {{/if}}
+
+    </div>
+</section>
+

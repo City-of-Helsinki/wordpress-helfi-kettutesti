@@ -1,0 +1,89 @@
+.article {
+	position: relative;
+
+	&__wrapper {
+		@include site-wrapper;
+		@include grid-base;
+		padding: 0;
+
+		margin-left: auto;
+		margin-right: auto;
+		justify-items: center;
+
+		padding-top: 40px;
+		padding-bottom: 64px;
+
+		@include breakpoint($tablet) {
+
+		}
+
+		@include breakpoint($desktop) {
+
+			padding-left: 16px;
+			padding-right: 16px;
+			padding-top: 76px;
+			padding-bottom: 136px;
+		}
+	}
+
+	//
+	// DEFAULT LAYOUTS CLASSES -------------------------
+	//
+
+	&__wysiwyg {
+		font-size: 20px;
+		line-height: 28px;
+		margin-bottom: 20px;
+		grid-column: 1 / span 4;
+		max-width: 688px + 32px;
+		padding-left: 16px;
+		padding-right: 16px;
+
+		p {
+			margin-top: 28px;
+			margin-bottom: 28px;
+		}
+
+		@include breakpoint($tablet) {
+
+			grid-column: 1 / span 12;
+		}
+
+	}
+
+	&__link {
+		font-weight: 300;
+		font-size: 40px;
+		line-height: 40px;
+		text-decoration: underline;
+		margin-left: auto;
+		margin-right: auto;
+
+		grid-column: 1 / span 4;
+		max-width: 688px;
+
+		@include focus();
+
+		@include breakpoint($tablet) {
+			grid-column: 1 / span 12;
+		}
+	}
+
+	img.aligncenter {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		margin-bottom: 56px;
+	}
+
+	//
+	// DEFAULT LAYOUT THEMING CLASSES ------------------
+	//
+
+	&.theme__cut-top-corner {
+	}
+
+	&.theme__cut-bottom-corner {
+	}
+
+}

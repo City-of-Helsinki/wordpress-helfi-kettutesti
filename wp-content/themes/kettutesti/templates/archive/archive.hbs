@@ -1,0 +1,29 @@
+<section class="archive">
+
+
+    <div class="archive__title-wrapper">
+
+        <h1 class="archive__title">{{single_post.post_title}}</h1>
+
+        <p class="archive__text">{{single_post.intro_text}}</p>
+    </div>
+
+    <div class="archive__wrapper">
+
+        <ol class="archive__list">
+            {{#each posts}}
+
+
+                {{> single-lift.hbs}}
+
+            {{/each}}
+        </ol>
+
+        {{> archive-pagination.hbs}}
+
+
+    </div>
+
+</section>
+
+

@@ -1,0 +1,108 @@
+.footer {
+	background-color: rgba(0, 0, 0, 0.87);
+	color: rgba(255, 255, 255, 0.87);
+	padding: 3em;
+
+	@media screen and (max-width: 920px) {
+		padding: 64px 10px;
+	}
+
+	&__logo {
+		width: 90%;
+		display: grid;
+		grid-template-columns: 1fr 10fr;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+
+		@media screen and (max-width: 920px) {
+			display: block;
+			text-align: center;
+		}
+
+		&-image {
+			width: 48px;
+			height: 45px;
+			@media screen and (max-width: 920px) {
+				width: 28px;
+				height: 25px;
+			}
+		}
+		&-outline {
+			height: 2px;
+			background-color: white;
+			max-width: 90%;
+			@media screen and (max-width: 920px) {
+				display: none;
+			}
+		}
+	}
+
+	&__container {
+		width: 74%;
+		margin: 2% auto;
+
+		&-list {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			justify-content: space-evenly;
+			align-content: space-evenly;
+			font-family: 'basis-grotesque-regular-pro';
+			font-size: 1.5em;
+			padding: 0px;
+
+			@media screen and (max-width: 1500px) {
+				grid-template-columns: repeat(2, 1fr);
+				font-size: 1.25em;
+			}
+
+			@media screen and (max-width: 920px) {
+				display: block;
+				text-align: center;
+				font-size: 1.25em;
+			}
+			@media screen and (max-width: 619px) {
+				font-size: 1em;
+			}
+
+			&-item {
+				position: relative;
+				padding-top: 25px;
+				&-name {
+					font-family: 'basis-grotesque-bold-pro';
+				}
+
+				@media screen and (max-width: 920px) {
+					width: 100%;
+					padding-top: 25px;
+				}
+				p {
+					margin: 0.7em 0;
+
+					a {
+						text-decoration: none;
+						color: white;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.infocont {
+		position: relative;
+		.infolink {
+			position: absolute;
+			@media screen and (max-width: 920px) {
+				position: relative;
+				margin-top: 50px;
+			}
+			bottom: 0;
+			a {
+				color: white;
+			}
+		}
+	}
+}

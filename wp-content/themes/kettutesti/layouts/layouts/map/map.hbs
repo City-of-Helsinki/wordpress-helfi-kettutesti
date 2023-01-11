@@ -1,0 +1,30 @@
+{{call 'setupLayoutData'}}
+
+<section {{#if anchor_id}}id="{{anchor_id}}"{{/if}}
+         class="map{{#if
+                 cut_top_corner}} theme__cut-top-corner{{/if}}{{#if
+                 cut_bottom_corner}} theme__cut-bottom-corner{{/if}} " style="background-image: url({{image.url}}); ">
+
+    <div class="map__wrapper">
+
+
+        {{! ************* Field: image ************* }}
+
+        {{#if mobile_image}}
+            <img class="map__mobile-image" src="{{mobile_image}}">
+        {{/if}}
+
+
+
+        {{! ************* Field: text ************* }}
+
+        {{#if text}}
+            <p class="map__text">{{{text}}}</p>
+        {{/if}}
+
+
+    </div>
+
+
+</section>
+

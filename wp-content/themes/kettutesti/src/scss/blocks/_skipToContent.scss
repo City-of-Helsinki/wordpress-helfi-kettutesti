@@ -1,0 +1,45 @@
+a.skip-to-content {
+	left: -999px;
+	position: absolute;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	z-index: -999;
+
+	&:focus {
+
+		width: auto;
+
+		z-index: 99999;
+		top: 8px;
+		left: 16px;
+		display: inline-block;
+
+		color: $color-shamrock;
+		overflow: visible;
+		outline: 4px solid $color-shamrock;
+		outline-offset: 2px;
+		background-color: $color-white;
+		height: 32px;
+		line-height: 32px;
+		padding-left: 16px;
+		padding-right: 16px;
+
+		@include breakpoint(640px) {
+			height: 40px;
+			top: 16px;
+			left: 24px;
+			line-height: 40px;
+		}
+
+		@at-root [data-whatintent='mouse'] & {
+			left: -999px;
+			top: auto;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			z-index: -999;
+		}
+	}
+}

@@ -1,0 +1,67 @@
+.pagination {
+	padding-left: 16px;
+	padding-right: 16px;
+
+	@include breakpoint($mobile-large) {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+
+	@include breakpoint($tablet) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.screen-reader-text {
+		@extend .visually-hidden;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.page-numbers {
+		text-transform: uppercase;
+		font-weight: 700;
+		display: block;
+		font-size: 14px;
+		line-height: 16px;
+
+		@include breakpoint($tablet) {
+
+		}
+
+		&:not(.prev):not(.next) {
+			margin-left: 4px;
+			margin-right: 4px;
+		}
+
+	}
+
+	a {
+		color: $color-blue-lagoon;
+
+		@include hover-pagination();
+	}
+
+	.prev, .next {
+
+		&[aria-hidden] {
+			opacity: .35;
+		}
+
+		@include breakpoint($tablet) {
+			letter-spacing: 1px;
+		}
+
+	}
+
+	.prev {
+		margin-right: auto;
+	}
+
+	.next {
+		margin-left: auto;
+	}
+
+}

@@ -1,0 +1,41 @@
+<header class="header">
+
+<section id="{{anchor_id}}"
+class="
+topnav 
+flex justify-center items-center" 
+style="
+background-image: url({{this.header.navbg.url}});
+background-repeat:repeat-x;height:130px;">
+
+<div 
+class="
+topnav__wrapper 
+flex justify-between 
+w-11/12">
+    <a 
+    href="{{this.header.pageurl}}">
+    <img 
+    src="{{this.header.siteLogo.url}}"
+    class="xm:w-[80%] w-auto" 
+    alt="cityLogo" aria-hidden="true"/></a>
+
+        <div>
+            {{#each wp.languages}}
+                    {{#unless active is 1}}
+                        <a 
+                        class="text-white drop-shadow-lg
+                        xm:text-xs text-base
+                        font-bold p-1 no-underline" 
+                        href="{{url}}" 
+                        lang="{{language_code}}"
+                        title="{{native_name}}">
+                            {{native_name}}
+                        </a>
+                    {{/unless}}
+                {{/each}}
+        </div>
+    </div>
+</section>
+
+</header>

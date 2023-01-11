@@ -1,0 +1,348 @@
+{{call 'setupLayoutData'}}
+
+<section id="{{anchor_id}}" class="heromedia " style="">
+
+<div class="heromedia__wrapper">
+    <div class="
+    heromedia__wrapper-smallimgdiv 
+    xm:block hidden relative">
+        <div 
+        class="
+        xm:flex sm:flex justify-between 
+        overflow-hidden"
+        >
+            <img src="{{this.imagegallary.3.url}}" 
+            class="
+            xm:w-[25%] 
+            xm:ml-[-30px] mt-[-100px] z-[-1]" 
+            alt=""
+            aria-hidden="true" />
+
+            {{#if this.imagegallary.5.url}}
+            <img src="{{this.imagegallary.5.url}}" 
+            class="
+            xm:w-[25%] xm:mx-auto mt-[-120px]
+            " 
+            alt="" 
+            aria-hidden="true" />
+            {{else}}
+            <img src="{{this.imagegallary.1.url}}" 
+            class="
+            xm:w-[40%] xm:mx-auto mb-[-50px]
+            " 
+            alt="" 
+            aria-hidden="true" />
+            {{/if}}
+
+            {{#if this.imagegallary.4.url}}
+            <img src="{{this.imagegallary.4.url}}" 
+            class="
+            xm:w-[60%] xm:mx-auto 
+            xm:mt-[-120px] xm:mr-[-50px]
+            " 
+            alt="" 
+            aria-hidden="true" />
+            {{else}}
+            <img src="{{this.imagegallary.0.url}}" 
+            class="
+            xm:w-[25%] xm:mt-[-30px]
+            " 
+            alt="" 
+            aria-hidden="true" />
+            {{/if}}
+        </div>
+            {{#if this.imagegallary.6.url}} 
+            <img src="{{this.imagegallary.2.url}}" alt="" 
+            class="xm:hidden"
+            aria-hidden="true" />
+            {{else}}
+             <img src="{{this.imagegallary.2.url}}" 
+             alt="" 
+             class="absolute w-[20%] 
+             right-0 bottom-[-80px]"
+             aria-hidden="true" />
+            {{/if}}
+    </div>
+
+{{#if this.imagegallary.6.url}}
+
+    <div class="
+    heromedia_wrapper-hero
+    w-full
+    xm:block grid 
+    grid-cols-4 
+    xm:mt-[-60px] mt-20
+    xm:mx-auto sm:mx-auto mx-0
+    "
+    >
+    <img src="{{this.imagegallary.3.url}}" 
+    alt="" 
+    class="
+    xm:hidden flex 
+    w-8/12 lg:w-6/12 xl:w-auto"
+    aria-hidden="true" />
+    <div class="
+    col-span-2"
+    >
+        <img src="{{this.imagegallary.1.url}}" 
+        alt="" 
+        class="
+        xm:hidden flex 
+        xm:w-8/12 sm:w-6/12 md:w-5/12 lg:w-3/12 xl:w-auto"
+        aria-hidden="true" />
+        <h1 
+        class="
+        text-red-500 font-bold 
+        text-3xl md:text-4xl lg:text-5xl xl:text-6xl
+        xm:p-2 p-0
+        xm:mt-6 sm:mt-8 mt-10"
+        >
+        {{this.herotitle}}
+        </h1>
+        <div class="
+        flex justify-between
+        ">    
+            {{#if this.herowyswyg}}
+                {{this.herowyswyg}}
+            {{/if}}
+            <p 
+            class="
+            xm:pl-2 pl-0 
+            text-lg md:text-xl lg:text-2xl xl:text-3xl 
+            mt-6 md:mt-8 lg:mt-10 xl:mt-12"
+            >
+            {{this.description}}
+            </p>
+            <img src="{{this.imagegallary.6.url}}" 
+            class="
+            xm:flex hidden w-[20%]" 
+            alt=""
+            aria-hidden="true" />
+        </div>
+        
+        <p 
+        class="
+        text-lg md:text-xl lg:text-2xl xl:text-3xl
+        xm:p-2 p-0 
+        mt-6 md:mt-8 lg:mt-10 xl:mt-12" 
+        >
+        {{this.descriptionmore}}
+        </p>
+    </div>
+
+    <div 
+    class="
+    grow-1 relative"
+    >
+        <img src="{{this.imagegallary.2.url}}" 
+             alt="" 
+             class="
+             absolute 
+             xm:hidden flex 
+             right-0 -top-10 
+             w-8/12 lg:w-6/12 xl:w-auto"
+             aria-hidden="true" />
+        <img src="{{this.imagegallary.0.url}}" 
+             alt="" 
+             class="
+             absolute 
+             xm:hidden flex 
+             right-0 bottom-0 
+             w-8/12 lg:w-4/12 xl:w-auto"
+             aria-hidden="true" />
+    </div>
+</div>
+
+{{else}}
+
+    <div 
+    class="
+    heromedia_wrapper-hero
+    xm:w-11/12 w-full 
+    xm:block grid 
+    grid-cols-4 
+    xm:mt-8 mt-20
+    xm:mx-auto sm:mx-auto mx-0">
+    <img src="{{this.imagegallary.3.url}}" 
+    alt="" 
+    class="
+    xm:hidden flex 
+    w-8/12 lg:w-6/12 xl:w-auto"
+    aria-hidden="true" />
+    <div class="col-span-2">
+        <img src="{{this.imagegallary.1.url}}" 
+        alt="" 
+        class=" 
+        xm:hidden flex 
+        xm:w-8/12 sm:w-6/12 md:w-5/12 lg:w-3/12 xl:w-auto"
+        aria-hidden="true" />
+        <h1 
+        class="
+        text-red-500 font-bold 
+        text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
+        xm:mt-6 sm:mt-8 mt-10"
+        >
+        {{this.herotitle}}
+        </h1>
+
+        {{#if this.herowyswyg}}
+            {{this.herowyswyg}}
+        {{/if}}
+
+        <p 
+        class=" 
+        text-lg md:text-xl lg:text-2xl xl:text-3xl 
+        mt-6 md:mt-8 lg:mt-10 xl:mt-12"
+        >
+        {{this.description}}
+        </p>
+        <p 
+        class="
+        text-lg md:text-xl lg:text-2xl xl:text-3xl 
+        mt-6 md:mt-8 lg:mt-10 xl:mt-12" 
+        >
+        {{this.descriptionmore}}
+        </p>
+    </div>
+
+    <div 
+    class="
+    grow-1 relative"
+    >
+        <img src="{{this.imagegallary.2.url}}" 
+             alt="" 
+             class="
+             absolute 
+             xm:hidden flex 
+             right-0 -top-10 
+             w-8/12 lg:w-6/12 xl:w-auto"
+             aria-hidden="true" />
+        <img src="{{this.imagegallary.0.url}}" 
+             alt="" 
+             class="
+             absolute 
+             xm:hidden flex 
+             right-0 bottom-0 
+             w-8/12 lg:w-4/12 xl:w-auto"
+             aria-hidden="true" />
+    </div>
+</div>
+
+{{/if}}
+
+{{#if this.imagegallary.7.url}} 
+<div 
+class="
+btncont 
+xm:flex xm:justify-between 
+overflow-hidden
+">
+<div class="
+heromedia_wrapper-buttons 
+xm:w-5/12 w-6/12 
+xm:mx-0 mx-auto
+xm:ml-5 
+xm:my-8 sm:my-8 my-12">
+
+    {{#if this.buttonslinks.0.btnlink1.url}}
+    <a href="{{this.buttonslinks.0.btnlink1.url}}" 
+    class="
+    bg-green-600 
+    text-white font-bold 
+    py-2 px-4 
+    xm:text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 
+    rounded 
+    md:mr-3
+    xm:block sm:block inline-block no-underline">
+    {{this.buttonslinks.0.btnlink1name}}
+    </a>
+    {{/if}}
+    {{#if this.buttonslinks.0.btnlink2.url}}
+     <a href="{{this.buttonslinks.0.btnlink2.url}}" 
+     class="
+     border-2 border-green-600 
+     text-green-600 font-bold 
+     py-2 px-4 
+     xm:text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 
+     rounded mt-5
+     ml-0 lg:ml-3 xl:ml-3 
+     xm:block sm:block inline-block no-underline">
+     {{this.buttonslinks.0.btnlink2name}}
+     </a>
+     {{/if}}
+     {{#if this.buttonslinks.0.btnlink3.url}}
+     <a href="{{this.buttonslinks.0.btnlink3.url}}" 
+     class="
+     bg-green-600 text-white 
+     font-bold 
+     py-2 px-4 
+     xm:text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 
+     rounded
+     xm:block sm:block inline-block no-underline">
+     {{this.buttonslinks.0.btnlink3name}}
+     </a>
+     {{/if}}
+</div>
+
+        <img src="{{this.imagegallary.7.url}}" 
+        class="
+        xm:block hidden
+        w-[50%] mr-[-50px]
+        scale-x-[-1]
+        " 
+        alt=""
+        aria-hidden="true" />
+ </div>   
+{{else}}
+<div 
+class="
+heromedia_wrapper-buttons 
+xm:w-5/12 w-6/12 
+xm:mx-0 mx-auto
+xm:ml-5 
+xm:my-8 sm:my-8 my-12">
+
+    {{#if this.buttonslinks.0.btnlink1.url}}
+    <a href="{{this.buttonslinks.0.btnlink1.url}}" 
+    class="
+    bg-green-600 text-white font-bold 
+    py-2 px-4 
+    xm:text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 
+    rounded 
+    md:mr-3
+    xm:block sm:block inline-block no-underline">
+    {{this.buttonslinks.0.btnlink1name}}
+    </a>
+    {{/if}}
+    {{#if this.buttonslinks.0.btnlink2.url}}
+     <a href="{{this.buttonslinks.0.btnlink2.url}}" 
+     class="
+     border-2 border-green-600 
+     text-green-600 font-bold 
+     py-2 px-4  
+     xm:text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 
+     rounded mt-5 
+     xm:ml-0 sm:ml-0 md:ml-0 ml-3 
+     xm:block sm:block inline-block no-underline">
+     {{this.buttonslinks.0.btnlink2name}}
+     </a>
+     {{/if}}
+     {{#if this.buttonslinks.0.btnlink3.url}}
+     <a href="{{this.buttonslinks.0.btnlink3.url}}" 
+     class="
+     bg-green-600 
+     text-white font-bold 
+     py-2 px-4 
+     xm:text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 
+     rounded 
+     xm:block sm:block inline-block no-underline">{{this.buttonslinks.0.btnlink3name}}</a>
+     {{/if}}
+</div>    
+
+{{/if}}
+
+</div>
+
+</div>
+
+</section>

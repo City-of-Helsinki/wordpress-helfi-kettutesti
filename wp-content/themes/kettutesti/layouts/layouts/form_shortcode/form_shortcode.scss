@@ -1,0 +1,82 @@
+.form-shortcode {
+
+	//
+	// DEFAULT CONTNENT WRAPPER CLASS ------------------
+	//
+
+	@include breakpoint($tablet) {
+
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	&__wrapper {
+		@include site-wrapper;
+		@include grid-base;
+
+		//background-color: $color-off-green;
+		border-radius: 32px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		max-width: 1408px;
+
+		@include breakpoint($tablet-small) {
+			padding-top: 56px;
+			padding-left: 40px;
+			padding-right: 40px;
+			padding-bottom: 40px;
+		}
+
+		@include breakpoint($tablet) {
+			border-radius: 48px;
+
+		}
+
+		@include breakpoint($desktop) {
+			padding-top: 88px;
+			padding-bottom: 80px;
+		}
+	}
+
+	//
+	// DEFAULT LAYOUTS CLASSES -------------------------
+	//
+
+	&__text-wrapper {
+		grid-column: 1 / span 6;
+
+		@include breakpoint($desktop) {
+			grid-column: 2 / span 5;
+		}
+	}
+
+	&__title {
+		font-size: 52px;
+		line-height: 64px;
+		margin-bottom: 32px;
+	}
+
+	&__text {
+		font-size: 20px;
+		line-height: 32px;
+	}
+
+	&__form-wrapper {
+		grid-column: 1 / span 6;
+
+		@include breakpoint($tablet) {
+			grid-column: 7 / span 6;
+		}
+
+
+
+		@include breakpoint($desktop) {
+			grid-column: 8 / span 4;
+		}
+	}
+
+	//
+	// DEFAULT LAYOUT THEMING CLASSES ------------------
+	//
+
+}
