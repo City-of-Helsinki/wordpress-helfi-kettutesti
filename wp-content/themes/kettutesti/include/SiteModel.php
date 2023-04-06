@@ -463,7 +463,8 @@ class SiteModel extends AbstractSiteModel
 						// social media links
 						$this->pageData["pageurl"] = $pageurl;
 						$this->pageData["facebookurl"] = 'https://www.facebook.com/sharer/sharer.php?u=' . $pageurl;
-						$this->pageData["twitterurl"] = 'https://twitter.com/intent/tweet?text=' . "kettutesti" . '&amp;url=' . $pageurl . '&amp;via=wpvkp';
+						$this->pageData["twitterurl"] = 'https://twitter.com/intent/tweet?text=' . '&amp;url=' . $pageurl;
+						$this->pageData["whatsappurl"] = 'whatsapp://send?text=' . $pageurl;
 
 
 						switch ($param) {
