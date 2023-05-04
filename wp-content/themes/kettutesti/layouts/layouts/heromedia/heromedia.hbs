@@ -92,7 +92,7 @@
         aria-hidden="true" />
         <h1 
         class="
-        text-red-500 font-bold 
+        text-black font-bold 
         text-3xl md:text-4xl lg:text-5xl xl:text-6xl
         xm:p-2 p-0
         xm:mt-6 sm:mt-8 mt-10"
@@ -178,7 +178,7 @@
         aria-hidden="true" />
         <h1 
         class="
-        text-red-500 font-bold 
+        text-black font-bold 
         text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
         xm:mt-6 sm:mt-8 mt-10"
         >
@@ -242,7 +242,10 @@ heromedia_wrapper-buttons
 xm:w-5/12 w-6/12 
 xm:mx-0 mx-auto
 xm:ml-5 
-xm:my-8 sm:my-8 my-12">
+xm:my-8 sm:my-8 my-12
+flex flex-wrap gap-[10px]
+xm:flex-col
+">
 
     {{#if this.buttonslinks.0.btnlink1.url}}
     <a href="{{this.buttonslinks.0.btnlink1.url}}" 
@@ -252,8 +255,7 @@ xm:my-8 sm:my-8 my-12">
     py-2 px-4 
     xm:text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 
     rounded 
-    md:mr-3
-    xm:block sm:block inline-block no-underline">
+    inline-block no-underline">
     {{this.buttonslinks.0.btnlink1name}}
     </a>
     {{/if}}
@@ -264,9 +266,8 @@ xm:my-8 sm:my-8 my-12">
      text-green-600 font-bold 
      py-2 px-4 
      xm:text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 
-     rounded mt-5
-     ml-0 lg:ml-3 xl:ml-3 
-     xm:block sm:block inline-block no-underline">
+     rounded
+     inline-block no-underline">
      {{this.buttonslinks.0.btnlink2name}}
      </a>
      {{/if}}
@@ -278,7 +279,7 @@ xm:my-8 sm:my-8 my-12">
      py-2 px-4 
      xm:text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 
      rounded
-     xm:block sm:block inline-block no-underline">
+     inline-block no-underline">
      {{this.buttonslinks.0.btnlink3name}}
      </a>
      {{/if}}

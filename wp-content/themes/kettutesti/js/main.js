@@ -330,17 +330,24 @@ class HeroMediaQuiz extends Layout_1.Layout {
 								id="q_${indexData}_a_${index}" 
 								data-info="q_${indexData}_a_${index}" 
 								value="" 
-								class="mr-[35px]" style="transform: scale(3);accent-color: orangered;"
+								class="sr-only"
 								aria-required="true"
 								>
-        						<label for="q_${indexData}_a_${index}" aria-required="true" class="col-span-2 text-base sm:text-lg md:text-lg lg:text-2xl xl:text-3xl my-1 md:my-2 lg:my-2 xl:my-3">${item.optionname}</label>
+        						<label for="q_${indexData}_a_${index}" aria-required="true" 
+										class="flex items-center col-span-2 text-base sm:text-lg md:text-lg lg:text-2xl xl:text-3xl my-1 md:my-2 lg:my-2 xl:my-3 cursor-pointer"
+								>
+									<span class="w-[40px] h-[40px] shrink-0 grow-0 mr-[15px] border-[3px] border-gray-500 rounded-[50%] inline-block input-checked:border-[#FD4F00] flex items-center justify-center">
+										<span class="rounded-[50%] w-[26px] h-[26px] input-checked:bg-[#FD4F00] block"></span>
+									</span>
+									<span>${item.optionname}</span>
+								</label>
     						</div>	
 						</div>`;
             }).join(`<br>`);
             output += `
 			<div class="question-list hidden" id="q-${indexData}">
-			<fieldset>
-			<legend><h1 class="text-red-500 font-bold xm:text-2xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-7xl my-4 md:my-6 lg:my-6 xl:my-8">${item.quiz.question}</h1></legend>
+			<fieldset class="flex flex-col">
+			<legend><h1 class="text-black font-bold xm:text-2xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-7xl my-4 md:my-6 lg:my-6 xl:my-8">${item.quiz.question}</h1></legend>
 				${options}
 			</div>
 			</fieldset>

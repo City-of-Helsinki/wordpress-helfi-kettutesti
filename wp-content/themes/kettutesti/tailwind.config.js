@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: [
       './templates/**/*.hbs',
@@ -14,7 +16,7 @@ module.exports = {
       'xl': {'min': '1561px'},
     },
     extend: {
-      margin: {
+      margin: { 
         "12":"5rem",
         "13":"6rem",
         "14":"7rem",
@@ -26,7 +28,11 @@ module.exports = {
       }
     }
   },
-plugins: [],
+  plugins: [
+    plugin(({ addVariant }) => {
+      addVariant('input-checked', 'input:checked + label &')
+    }),  
+  ],
 }
 
 
